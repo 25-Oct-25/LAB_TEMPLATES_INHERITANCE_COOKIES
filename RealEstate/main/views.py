@@ -18,3 +18,6 @@ def properties_view(request:HttpRequest):
 
     return render(request, "main/properties.html", context= {"properties_list": properties})
 
+def contact_view(request:HttpRequest):
+
+    return render(request, "main/contact.html")
