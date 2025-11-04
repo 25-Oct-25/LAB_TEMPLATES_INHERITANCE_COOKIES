@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Estate{% endblock %}</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="{% if request.COOKIES.theme == 'dark' %}dark-mode{% endif %}">
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="{% url 'main:home_view' %}" class="logo-link">HOME</a>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="{% url 'main:home_view' %}">Home</a></li>
+        <li><a href="{% url 'main:properties_view' %}">Properties</a></li>
+        <li><a href="{% url 'main:services_view' %}">Services</a></li>
+        <li><a href="{% url 'main:about_view' %}">About</a></li>
+        <li><a href="{% url 'main:contact_view' %}">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-actions">
+      <span class="material-icons">person</span>
+      <a href="#" class="signup-text">Sign up</a>
+        <a href="{% url 'main:switch_mode' %}"
+        class="theme-icon {% if request.COOKIES.theme != 'dark' %}active{% endif %}"
+        title="Switch to Dark Mode">
+        <span class="material-icons">wb_sunny</span>
+      </a>
+
+        <a href="{% url 'main:switch_mode' %}"
+        class="theme-icon {% if request.COOKIES.theme == 'dark' %}active{% endif %}"
+        title="Switch to Light Mode">
+        <span class="material-icons">dark_mode</span>
+      </a>
+
+    </div>
+  </nav>
+
+  
+  <div id="page-wrapper">
+    {% block content %}{% endblock %}
+  </div>
+
+  <script src="{% static 'js/animations.js' %}"></script>
+
+</body>
+</html>

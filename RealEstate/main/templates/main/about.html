@@ -1,0 +1,89 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>ABOUT <br> OUR AGENCY</h1>
+    <p>We are dedicated to providing exceptional real estate experiences that redefine luxury living.</p>
+  </div>
+</section>
+
+<!-- STORY SECTION -->
+<section class="about-story">
+  <div class="story-content">
+    <div class="story-text">
+      <h2>OUR STORY</h2>
+      <p>
+        Founded with a passion for excellence, our agency connects clients with the most exclusive
+        properties across the region. From luxurious villas to elegant apartments, we ensure that every
+        transaction is seamless and rewarding.
+      </p>
+      <p>
+        Our commitment to innovation, integrity, and client satisfaction has made us one of the most
+        trusted names in the real estate industry.
+      </p>
+    </div>
+    <div class="story-image">
+      <img src="{% static 'images/office-building.jpg' %}" alt="Our Office Building">
+    </div>
+  </div>
+</section>
+
+<!-- VALUES SECTION -->
+<section class="about-values">
+  <h2>OUR VALUES</h2>
+  <div class="values-container">
+    <div class="value-card">
+      <span class="material-icons">verified</span>
+      <h3>Trust</h3>
+      <p>We build lasting relationships through honesty and transparency.</p>
+    </div>
+    <div class="value-card">
+      <span class="material-icons">diamond</span>
+      <h3>Quality</h3>
+      <p>We provide top-tier service and carefully curated property listings.</p>
+    </div>
+    <div class="value-card">
+      <span class="material-icons">lightbulb</span>
+      <h3>Innovation</h3>
+      <p>We leverage technology to deliver smarter real estate solutions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<!-- TEAM SECTION -->
+<section class="about-team">
+  <h2>MEET OUR TEAM</h2>
+  <div class="team-container">
+    <div class="team-card">
+      <div class="team-image">
+        <img src="{% static 'images/team1.jpg' %}" alt="Sarah Johnson">
+      </div>
+      <h3>Sarah Johnson</h3>
+      <p>Founder & CEO</p>
+    </div>
+
+    <div class="team-card">
+      <div class="team-image">
+        <img src="{% static 'images/team2.jpg' %}" alt="Michael Smith">
+      </div>
+      <h3>Michael Smith</h3>
+      <p>Lead Agent</p>
+    </div>
+
+    <div class="team-card">
+      <div class="team-image">
+        <img src="{% static 'images/team3.jpg' %}" alt="Olivia Brown">
+      </div>
+      <h3>Olivia Brown</h3>
+      <p>Marketing Manager</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

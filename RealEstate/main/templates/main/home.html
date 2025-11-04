@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1 class="animate-text">FIND YOUR<br>DREAMS</h1>
+    <p>
+      Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.
+    </p>
+    <a href="{% url 'main:properties_view' %}" class="btn">Explore Properties</a>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="category">
+    <span class="material-icons">home</span>
+    <p>ALL</p>
+  </div>
+  <div class="category">
+    <span class="material-icons">apartment</span>
+    <p>PROPERTIES</p>
+  </div>
+  <div class="category">
+    <span class="material-icons">hotel</span>
+    <p>HOTEL</p>
+  </div>
+  <div class="category">
+    <span class="material-icons">villa</span>
+    <p>VILLA</p>
+  </div>
+</section>
+{% endblock %}
