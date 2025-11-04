@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block page_title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-main">
+  <div class="home-content">
+    <h1 class="main-title anim a1">
+      FIND YOUR<br> DREAMS
+    </h1>
+    <p class="sub-text anim a2">
+      Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.
+    </p>
+    <a class="cta-btn anim a3" href="{% url 'main:properties' %}">Explore Properties</a>
+  </div>
+
+  <div class="filter-wrap anim a4">
+    <div class="filter-bar">
+      <a class="filter-unit" href="#">
+        <span class="unit-icon material-symbols-outlined">house</span>
+        <span class="label">ALL</span>
+      </a>
+      <a class="filter-unit" href="{% url 'main:properties' %}">
+        <span class="unit-icon material-symbols-outlined">factory</span>
+        <span class="label">PROPERTIES</span>
+      </a>
+      <a class="filter-unit" href="#">
+        <span class="unit-icon material-symbols-outlined">hotel</span>
+        <span class="label">HOTEL</span>
+      </a>
+      <a class="filter-unit" href="#">
+        <span class="unit-icon material-symbols-outlined">villa</span>
+        <span class="label">VILLA</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}
