@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block background%}
+<style>
+    .wrapper{
+    background-image: none;
+
+    }
+    body.dark .wrapper{
+  background-image: none;
+}
+</style>
+ {% endblock%}
+{% block content%}
+
+<main class="section">
+<div class="more-info">
+<h1 class="font-medium text-4xl">{{ title }}</h1>  
+<img src="{% static 'resources/' %}{{ image }}" alt="{{ title }}">
+<p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our
+   catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+</div>
+
+</main>
+
+{% endblock %}

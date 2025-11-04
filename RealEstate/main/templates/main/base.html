@@ -1,0 +1,47 @@
+{% load static %}
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <title>{% block title %} {% endblock %}</title>
+    {% block background%} {% endblock%}
+</head>
+<body class="{% if request.COOKIES.mode == 'dark' %}dark{% endif %}">
+    
+<main class="wrapper">
+  
+    <nav>
+        <a href="/" class="logo"><strong>HOME</strong></a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="{% url 'main:properties_view' %}">Properties</a>
+            <a href="">Service</a>
+            <a href="">About</a>
+            <a href="{% url 'main:contact_view' %}">Contact</a>
+        </div>
+
+        <div class="icons-nav">
+            <a href=""><span class="material-symbols-outlined">person</span></a>
+            <a href="" class="pr-16 pb-16">Sign up</a>
+            <a href="{% url 'main:mode_view' 'light'%}?next={{request.path}}"><span class="material-symbols-outlined  {% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %}active-icon {% endif %}">sunny</span></a>
+            <a href="{% url 'main:mode_view' 'dark'%}?next={{request.path}}"><span class="material-symbols-outlined {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}active-icon {% endif %}">dark_mode</span></a>
+        </div>
+
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+   
+</main>
+
+</body>
+
+</html>
