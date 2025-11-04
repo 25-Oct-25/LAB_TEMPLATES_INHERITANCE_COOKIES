@@ -1,0 +1,487 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Phudu", sans-serif;
+}
+
+.header-nav{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16rem;
+
+    padding: 5rem 10rem;
+    margin-top: 13rem;
+
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    transition: transform 0.3s ease-out;
+}
+
+
+.header-nav a{
+    transition: transform 0.3s ease-out;
+}
+
+.header-nav a:hover{
+    color: red;
+    transform: scale(1.1);
+
+}
+
+
+
+
+
+.logo{
+    font-size: 45px;
+    font-weight: 395;
+
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+
+}
+
+html.dark-mode a{
+    color: white;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    background-color: white;
+    border-radius: 45px;
+    padding: 2rem 5rem;
+    transition: transform 0.3s ease-out;
+
+}
+
+.nav-links:hover{
+    transform: scale(1.1);
+}
+
+html.dark-mode .nav-links{
+    background-color: black;
+}
+
+.right-nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.right-nav a{
+    white-space: nowrap;
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease-out;
+}
+
+.right-nav a:hover{
+    transform: scale(1.1);
+
+}
+
+.right-nav .material-symbols-outlined{
+    cursor: pointer;
+    font-size: 25px;
+    display: block;
+    line-height: 1;
+    position: relative;
+
+}
+
+html.dark-mode .right-nav .material-symbols-outlined{
+    color: white;
+}
+
+.theme{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.theme .active{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    padding: 0.3rem;
+    
+}
+
+html.dark-mode .theme .active{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.home-page-main{
+    min-height: 100vh;
+    background-image: url('/static/images/skyscraper.jpeg'), linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    
+
+}
+
+html.dark-mode .home-page-main{
+    background-image: url('/static/images/skyscraper-dark.jpg');
+}
+
+.home-content{
+    flex-grow: 1;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 100px;
+
+}
+
+.home-text-container{
+    max-width: 600px;
+    color: black;
+}
+
+html.dark-mode .home-text-container{
+    color: white;
+}
+
+
+
+
+
+.home-text-container h1{
+    font-size: 9rem;
+    line-height: 1;
+    width: 900px;
+    font-weight: 395;
+
+    animation-name: fade-in-up ;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);;
+    animation-fill-mode: forwards;
+    animation-delay:0.2s ;
+
+}
+
+
+
+
+
+.home-text-container p{
+    font-size: 1rem;
+    margin: 2rem 0rem;
+    line-height: 1.5;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease-out;
+}
+
+.explore-btn:hover{
+    transform: scale(1.1);
+}
+
+html.dark-mode .explore-btn{
+    background-color: white;
+    color: black;
+}
+
+.explore-btn:hover{
+    background-color:#333;
+}
+
+.filter-bar-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -50px;
+    
+}
+
+.filter-bar{
+    background-color: white;
+    border-radius: 70px;
+    padding: 2rem 7rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 8rem;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s ease-out;
+}
+
+.filter-bar:hover{
+    transform: scale(1.1);
+}
+
+html.dark-mode .filter-bar{
+    background-color: black;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+html.dark-mode .filter-item{
+    color: white;
+}
+
+
+.filter-item.active, .filter-item:hover{
+    opacity: 1;
+}
+
+.filter-bar .material-symbols-outlined{
+    padding: 5px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.bottom-grey-area {
+    width: 100%;
+    height: 100px;
+    background-color: #e0e0e0; 
+
+}
+
+html.dark-mode .bottom-grey-area{
+    background-color: black;
+}
+
+.properties-content{
+    padding: 15rem 10rem;
+}
+
+.properties-content h2{
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+
+}
+
+html.dark-mode .properties-content h2{
+    color:white;
+}
+
+.properties-list{
+    padding-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+
+
+}
+
+.villa{
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.villa img{
+    width: 100%;
+    min-height: 30vh;
+    display: block;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.villa-details{
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    padding: 1rem ;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+
+html.dark-mode .villa-details{
+    background-color: black;
+}
+
+.villa-details h3{
+    font-size: 1.3rem;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    color: black;
+
+}
+
+html.dark-mode .villa-details h3{
+    color: white;
+}
+
+.more-btn{
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease-out;
+}
+
+html.dark-mode .more-btn{
+    background-color: white;
+    color: black;
+}
+
+.more-btn:hover{
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+.contact-us-main{
+    min-height: 100vh;
+    background-image: url("/static/images/email.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-us-text-container{
+    padding: 15rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+html.dark-mode .title{
+    color: white;
+}
+
+html.dark-mode .contact-info{
+    color: white;
+
+}
+
+.telephone, .email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 13rem;
+}
+
+.anchor-text{
+    font-size: 20px;
+
+}
+.telephone .anchor-text, .email .anchor-text{
+    color: blue;
+}
+
+.telephone, .address, .email{
+    padding-bottom: 2rem;
+    
+}
+
+.telephone h2, .address h2, .email h2{
+    font-weight: 450;
+}
+.map-contact-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.map-container{
+    width: 50vw;
+    height: 40vh;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.map-container iframe{
+    width: 100%;
+    height: 100%;
+}
+.contact-info{
+    padding-top: 3rem;
+
+}
+
+.contact-info a{
+    transition: transform 0.3s ease-out;
+}
+
+.contact-info a:hover{
+    transform: scale(1.1);
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translate3d(-400px, 0px, 0px) scale(0.5);
+    }
+
+
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0,0) scale(1);
+    }
+    
+}
