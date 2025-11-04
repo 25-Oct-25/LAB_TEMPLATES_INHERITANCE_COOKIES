@@ -1,0 +1,136 @@
+{% extends "main/base.html" %} {% load static %} {% block title %} Home - Find
+Your Dreams {% endblock title %} {% block nav_class %} position-absolute w-100
+{% endblock nav_class %} {% block content %}
+<section class="custom-hero-section position-relative text-start py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1 class="custom-hero-title text-uppercase mb-3 animate-slide-up">
+          FIND YOUR <br />
+          DREAMS
+        </h1>
+
+        <h6 class="custom-hero-text mb-4">
+          Discover an unparalleled selection of luxury properties designed to
+          meet your lifestyle. Explore opportunities that redefine modern living
+          and elegance. 
+         <form action="{% url 'main:toggle_font' %}" method="POST" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-link text-decoration-none p-0 ps-2" id="fontToggleBtn">
+            
+              <i class="fa fa-search-plus light-mode-icon" id="fontPlusLight"></i>
+              <i class="fa fa-search-plus dark-mode-icon d-none" id="fontPlusDark"></i>
+              
+              <i class="fa fa-search-minus light-mode-icon d-none" id="fontMinusLight"></i>
+              <i class="fa fa-search-minus dark-mode-icon d-none" id="fontMinusDark"></i>
+            </button>
+          </form>
+
+        </h6>
+         
+
+        <a
+          href="{% url 'main:properties_view' %}"
+          class="btn btn-dark text-white rounded-5 px-4 py-2"
+        >
+          Explore Properties
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="custom-category-bar d-flex flex-wrap justify-content-center gap-4 mt-5"
+  >
+    <div class="category-item text-center">
+      <div class="category-icon-wrapper bg-success-subtle rounded-circle p-3">
+        <i class="fa-solid fa-house-chimney icon-red fs-4"></i>
+      </div>
+      <small class="d-block mt-2 text-uppercase fw-bold">All</small>
+    </div>
+
+    <div class="category-item text-center">
+      <div class="category-icon-wrapper bg-warning-subtle rounded-circle p-3">
+        <i class="fa-solid fa-city icon-orange fs-4"></i>
+      </div>
+      <small class="d-block mt-2 text-uppercase fw-bold">Properties</small>
+    </div>
+
+    <div class="category-item text-center">
+      <div class="category-icon-wrapper bg-primary-subtle rounded-circle p-3">
+        <i class="fa-solid fa-bed icon-purple fs-4"></i>
+      </div>
+      <small class="d-block mt-2 text-uppercase fw-bold">Hotel</small>
+    </div>
+
+    <div class="category-item text-center">
+      <div class="category-icon-wrapper bg-info-subtle rounded-circle p-3">
+        <i class="fa-solid fa-building icon-blue fs-4"></i>
+      </div>
+      <small class="d-block mt-2 text-uppercase fw-bold">Villa</small>
+    </div>
+  </div>
+</section>
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isLarge = document.body.classList.contains("large-font");
+
+    const plusLight = document.getElementById("fontPlusLight");
+    const plusDark = document.getElementById("fontPlusDark");
+    const minusLight = document.getElementById("fontMinusLight");
+    const minusDark = document.getElementById("fontMinusDark");
+    
+    
+    function getCurrentTheme() {
+        return document.documentElement.getAttribute("data-bs-theme");
+    }
+
+    
+    function updateFontToggleIcon() {
+        const currentTheme = getCurrentTheme();
+        
+        if (isLarge) {
+            
+            if (currentTheme === 'dark') {
+                minusDark.classList.remove("d-none");
+                minusLight.classList.add("d-none");
+                plusDark.classList.add("d-none");
+                plusLight.classList.add("d-none");
+            } else { 
+                minusLight.classList.remove("d-none");
+                minusDark.classList.add("d-none");
+                plusLight.classList.add("d-none");
+                plusDark.classList.add("d-none");
+            }
+        } else {
+            
+            if (currentTheme === 'dark') {
+                plusDark.classList.remove("d-none");
+                plusLight.classList.add("d-none");
+                minusDark.classList.add("d-none");
+                minusLight.classList.add("d-none");
+            } else { 
+                plusLight.classList.remove("d-none");
+                plusDark.classList.add("d-none");
+                minusLight.classList.add("d-none");
+                minusDark.classList.add("d-none");
+            }
+        }
+    }
+
+    updateFontToggleIcon();
+    
+    const themeToggleButton = document.getElementById("theme-toggle");
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', () => {
+
+             setTimeout(updateFontToggleIcon, 50); 
+        });
+    }
+
+  });
+</script>
+{% endblock extra_js %}

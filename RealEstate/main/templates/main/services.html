@@ -1,0 +1,125 @@
+{% extends "main/base.html" %} 
+{% load static %}
+
+{% block title %} Services - Find Your Dreams {% endblock title %} 
+
+{% block extra_css %}
+<style>
+    .services-hero {
+        background: linear-gradient(rgba(13, 13, 13, 0.4), rgba(0, 0, 0, 0.6)), url("{% static 'images/skyscraper.jpeg' %}") center center no-repeat;
+        background-size: cover;
+        height: 60vh;
+        color: white;
+        padding-top: 150px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    
+    .services-hero h1 {
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        animation: slideInUp 1s ease-out forwards 0.3s;
+    }
+    .services-hero p.lead {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        animation: slideInUp 1s ease-out forwards 0.6s;
+    }
+
+    .services-content {
+        padding: 80px 0;
+        background-color: var(--bs-body-bg);
+    }
+    .service-card {
+        background-color: var(--box-bg-light);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        opacity: 0; 
+    }
+    [data-bs-theme="dark"] .service-card {
+        background-color: var(--box-bg-dark);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    @keyframes slideInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .delay-1 { animation: slideIn 0.8s ease-out forwards 1.0s; }
+    .delay-2 { animation: slideIn 0.8s ease-out forwards 1.2s; }
+    .delay-3 { animation: slideIn 0.8s ease-out forwards 1.4s; }
+    .delay-4 { animation: slideIn 0.8s ease-out forwards 1.6s; }
+</style>
+{% endblock extra_css %}
+
+{% block content %}
+<section class="services-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4 mb-3">Your Journey Starts Here</h1>
+                <p class="lead">A complete suite of services designed for luxury real estate success.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-content">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 ">Key Offerings</h2>
+            <p class="lead text-muted">We offer comprehensive real estate solutions, seamlessly tailored to meet your unique demands.</p>
+        </div>
+        
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center p-4 delay-1 h-100">
+                    <i class="fa-solid fa-handshake display-5  mb-3"></i>
+                    <h5 class="fw-bold">Luxury Sales & Acquisition</h5>
+                    <p class="card-text text-muted small">Expert guidance through buying or selling high-value residential properties.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center p-4 delay-2 h-100">
+                    <i class="fa-solid fa-clipboard-list display-5 text-success mb-3"></i>
+                    <h5 class="fw-bold">Exclusive Property Management</h5>
+                    <p class="card-text text-muted small">Hassle-free management, maintenance, and tenant services for investors.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center p-4 delay-3 h-100">
+                    <i class="fa-solid fa-user-tie display-5 text-warning mb-3"></i>
+                    <h5 class="fw-bold">Strategic Consultation</h5>
+                    <p class="card-text text-muted small">Market analysis, investment strategy, and personalized financial planning advice.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center p-4 delay-4 h-100">
+                    <i class="fa-solid fa-chart-line display-5 text-danger mb-3"></i>
+                    <h5 class="fw-bold">Valuation & Appraisal</h5>
+                    <p class="card-text text-muted small">Accurate, defensible valuations based on current luxury market trends.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+{% endblock content %}
