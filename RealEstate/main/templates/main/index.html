@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Home | RealEstate{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <h1>FIND YOUR<br>DREAMS</h1>
+    <p>
+      Our catalog will surprise you. Rather, discover an unprecedented collection
+      of luxury properties that redefine modern living.
+    </p>
+    <a href="{% url 'main:properties_view' %}" class="btn-primary">Explore Properties</a>
+  </div>
+
+  <div class="categories">
+    <div class="cat">
+      <span class="material-symbols-outlined" style="color:#6dc36d;">home</span>
+      <p style="color:#6dc36d;">ALL</p>
+    </div>
+
+    <div class="cat">
+      <span class="material-symbols-outlined" style="color:#b8860b;">apartment</span>
+      <p style="color:#b8860b;">PROPERTIES</p>
+    </div>
+
+    <div class="cat">
+      <span class="material-symbols-outlined" style="color:#d36ad6;">hotel</span>
+      <p style="color:#d36ad6;">HOTEL</p>
+    </div>
+
+    <div class="cat">
+      <span class="material-symbols-outlined" style="color:#5469d4;">villa</span>
+      <p style="color:#5469d4;">VILLA</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
