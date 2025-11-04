@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="{% static 'js/actions.js' %}"></script>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>{% block title %} {% endblock %}</title>
+    {% block extra_style %}{% endblock %}
+</head>
+<body class="{% if request.COOKIES.theme == 'dark' %}dark{% else %}light{% endif %}">
+    <header>
+        <a href="{% url 'main:home_view' %}" class="logo">HOME</a>
+        <nav class="top_nav">
+            <a href="{% url 'main:home_view' %}">Home</a>
+            <a href="{% url 'main:properties_view' %}">Properties</a>
+            <a href="#">Services</a>
+            <a href="{% url 'main:about_view' %}">About</a>
+            <a href="{% url 'main:contact_us_view' %}">Contact</a>
+        </nav>
+        <div class="right_nav">
+            <div class="sign_up_box">
+                <span class="material-icons">person</span>
+                <span class="sign_up">Sign up</span>
+            </div>
+            <div class="theme-icons">
+                <a href="{% url 'main:set_theme' 'light' %}?HTTP_REFERER={{request.path}}">
+                    <span class="material-icons light_mode">light_mode</span>
+                </a>
+                <a href="{% url 'main:set_theme' 'dark' %}?HTTP_REFERER={{request.path}}">
+                    <span class="material-icons dark_mode">dark_mode</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+    <footer> &copy; Real Estate International All Right Reserved 2025 </footer>
+
+</body>
+</html>

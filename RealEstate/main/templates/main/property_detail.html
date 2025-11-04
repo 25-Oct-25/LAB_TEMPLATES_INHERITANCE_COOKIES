@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+{{ property.title }}
+{% endblock %}
+
+{% block content %}
+<div class="property-detail">
+    <img src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
+    <h1>{{ property.title }}</h1>
+    <p>
+        This stunning villa features luxury design, modern spaces, and a calm neighborhood.
+        Perfect for families looking for elegance and comfort.
+    </p>
+    <a href="{% url 'main:properties_view' %}" class="back"><span
+            class="material-icons arrow">arrow_circle_left</span>Go Back</a>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block extra_style %}
+<style>
+    body {
+        background-image: url("{% static 'images/skyscraper.svg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    body.dark {
+        background-image: url("{% static 'images/skyscraper-dark.svg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="big_title">
+        <div class="bg_title">
+            <h1 onclick="zoomLeft(this)">FIND YOUR<br>DREAMS</h1>
+            <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+        </div>
+        <a href="{% url 'main:properties_view' %}" class="btn-explore">Explore Properties</a>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="icon-item all">
+        <span class="material-icons icon">home</span>
+        <span>ALL</span>
+    </div>
+
+    <div class="icon-item property">
+        <span class="material-icons icon">business</span>
+        <span>PROPERTY</span>
+    </div>
+
+    <div class="icon-item hotel">
+        <span class="material-icons icon">hotel</span>
+        <span>HOTEL</span>
+    </div>
+
+    <div class="icon-item villa">
+        <span class="material-icons icon">holiday_village</span>
+        <span>VILLA</span>
+    </div>
+</section>
+{% endblock %}

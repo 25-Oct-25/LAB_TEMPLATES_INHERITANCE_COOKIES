@@ -1,0 +1,23 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %}
+properties
+{% endblock %}
+
+{% block content %}
+<section class="properties">
+    <h1>OUR PROPERTIES</h1>
+    <div class="cards">
+        {% for prop in properties %}
+        <div class="card">
+            <div class="img">
+                <img src="{% static 'images/' %}{{ prop.image }}" alt="{{ prop.title }}">
+            </div>
+            <h3>{{ prop.title|upper }}</h3>
+            <a href="{% url 'main:property_detail_view' prop.id %}" class="more-btn">More</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
