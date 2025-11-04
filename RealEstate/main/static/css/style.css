@@ -1,0 +1,452 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    /* -- Add font family here -- */
+    font-family: "Phudu", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+/* dark mode */
+body.dark-mode
+{
+    --bg-color: #121212;
+    --text-color:#f5f5f5;
+    --card-bg: #1e1e1e;
+    --nav-bg: #222;
+    --accent-color: #ff2c2c;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+header
+{
+    gap: 170px;
+    width: 100%;
+    height: 45px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.01);
+    position: fixed;
+    z-index: 2;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.home-logo a
+{
+    font-size: 2rem;
+    font-weight: 500;
+    transition: font-size 1.5s , color 2.5s;
+}
+
+.home-logo a:hover
+{
+    color: red;
+    font-size: 2.5rem;
+}
+
+header nav ul
+{
+    gap: 35px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    padding-right: 100px;
+    margin-right: 10px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+
+header nav ul li a:hover
+{
+    color: red;
+}
+
+
+.setting
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting .signup
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting .signup span
+{
+    padding-right: 7px;
+}
+
+.setting .signup a
+{
+    padding-right: 7px;
+}
+
+.setting .light-dark
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting .light-dark span
+{
+    font-size: 1.2rem;
+    padding: 0.4rem;
+}
+.light-dark .light-mode
+{
+    margin: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+}
+
+.light-dark .dark-mode
+{
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+}
+/* ---- */
+main
+{
+    width: 100%;
+    height: 90vh;
+    padding: 0px;
+    margin: 0px;
+    background-image: url('/static/images/skyscraper.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #E6E6E6;
+    display: flex;
+    align-items: center;
+}
+
+body.dark-mode main
+{
+    background: url('/static/images/skyscraper-dark.jpg') center/cover no-repeat;
+}
+
+section
+{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding-left: 205px;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+@keyframes text-fade {
+  0% { opacity: 1; } /* Start fully visible */
+  50% { opacity: 0.2; } /* Fade to nearly transparent */
+  100% { opacity: 1; } /* End fully visible (to loop seamlessly) */
+}
+
+section h1
+{
+    font-size: 3cm;
+    text-align: left;
+    font-weight: 500;
+    padding-bottom: 30px;
+    animation: text-fade 2s ease-in-out infinite alternate;
+}
+
+
+section p
+{
+    font-size: small;
+    padding-bottom: 30px;
+}
+
+section a
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: small;
+    width: fit-content;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.part-content
+{
+    width: 100%;
+    display: flex;
+    /* margin-bottom: 0px; */
+    align-items: center;
+    justify-content: center;
+    background: rgb(225, 224, 224);
+    padding-bottom: 70px;
+    /* Here will edit if we want the item over-up */
+}
+
+.part-content ul
+{
+    position: fixed;
+    width: fit-content;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #fff;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-bottom: 0px;
+}
+
+
+
+.part-content ul li
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.part-content ul li .icon
+{
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.part-content ul li:nth-child(1)
+{
+    color: #2fe82f;
+}
+
+.part-content ul li:nth-child(1) .icon
+{
+    background-color: #a1fba1;
+}
+
+.part-content ul li:nth-child(2)
+{
+    color: #d69533;
+}
+
+.part-content ul li:nth-child(2) .icon
+{
+    background-color: #ECDEC9;
+}
+
+.part-content ul li:nth-child(3)
+{
+    color: #eb51fc;
+}
+
+.part-content ul li:nth-child(3) .icon
+{
+    background-color: #FBD8FF;;
+}
+
+.part-content ul li:nth-child(4)
+{
+       color: #242478;
+}
+
+.part-content ul li:nth-child(4) .icon
+{
+    background-color: #E6E6FA;
+}
+
+/*-- Properties style -- */
+.properties-content
+{
+    width: 100%;
+    height: fit-content;
+    padding-left: 220px;
+    margin-top: 150px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.properties-content .properties-title
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.properties-content .our-properities
+{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 320px 320px 320px;
+}
+
+.properties-content .our-properities .card
+{
+    width: 320px;
+    height: 320px;
+    display: flex;
+    border-radius: 30px;
+    align-items:baseline;
+    justify-content: start;
+    flex-direction: column;
+    background-color: rgb(215, 213, 213);
+}
+
+.properties-content .our-properities .card .image
+{
+    width: 320px;
+    height: 270px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.properties-content .our-properities .card .title
+{
+    height: 80px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+
+    padding-top: 30px;
+}
+.properties-content .our-properities .card .title h3
+{
+    padding-left: 20px;
+    width: 300px;
+    font-size: medium;
+    text-align: left;
+}
+.properties-content .our-properities .card .title .btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 300px;
+}
+.properties-content .our-properities .card .title .btn a
+{
+    color: #fff;
+    text-align: center;
+    width: fit-content;
+
+    margin-top: 7px;
+
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border-radius: 30px;
+    font-size: small;
+    background-color: #000;
+
+}
+
+/* -- Contact Style -- */
+.contact-content
+{
+    width: 100%;
+    height: fit-content;
+    padding-left: 220px;
+    margin-top: 150px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-content .contact-us-title
+{
+    margin-left: 0px;
+}
+
+.contact-content .contact-us-title h2
+{
+    font-weight: 500;
+}
+
+.contact-content .info 
+{
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;    
+}
+
+.contact-content .info .details
+{
+    width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content .info .details h3
+{
+    font-weight: 500;
+    margin: 20px;
+    margin-left: 0;
+}
+
+.contact-content .info .details h3 a
+{
+    color: blue;
+    text-transform: none;
+    text-decoration: underline;
+    text-transform: none ;
+}
+
+.contact-content .info .location
+{
+    width: 700px;
+    height: 400px;
+    border-radius: 50px;
+}
+.contact-content .info .location iframe
+{
+    width: 700px;
+    height: 400px;
+    border-radius: 30px;
+}

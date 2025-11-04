@@ -1,0 +1,77 @@
+{% extends 'main/global.html' %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block style_head %}
+<style>
+    html.dark main
+    {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: gray;
+        background-image: url('/static/images/skyscraper-dark.jpg');
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <h1>
+        FIND YOUR <br>DREAMS
+    </h1>
+    <p>
+        Our catalog will surprise you. Rather, discover an unprcendented offers of luxury properties. Our <br>
+        catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.
+    </p>
+    <a href="{% url 'main:properties_view' %}">
+        Expolore Properties
+    </a>
+</section>
+
+{% endblock %}
+
+{% block part-content %}
+
+<div class="part-content">
+    <ul type="none">
+        <li>
+            <div class="
+            ">
+                <span class="material-symbols-outlined">
+                    house
+                </span>
+            </div>
+            <p>ALL</p>
+        </li>
+        <li>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    factory
+                </span>
+            </div>
+            <p>PROPERITIES</p>            
+        </li>
+        <li>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    hotel
+                </span>
+            </div>
+            <p>HOTEL</p>            
+        </li>
+        <li>
+            <div class="icon">
+                <span class="material-symbols-outlined">
+                    villa
+                </span>
+            </div>
+            <p>VILLA</p>            
+        </li>
+    </ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title> {% block title %} {% endblock %} </title>
+    {% block style_head %}{% endblock %}
+</head>
+<body class = "{% if request.COOKIES.theme == 'dark' %} dark-mode {% endif %}">
+
+    <div class="stick-header">
+        
+    </div>
+    <header>
+        <div class="home-logo">
+            <a href="/">
+                HOME
+            </a>
+        </div>
+        <nav>
+            <ul type = "none">
+                <li>
+                    <a href="{% url 'main:home_view' %}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'main:properties_view' %}">
+                        Properties
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Services
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'main:contact_view' %}">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="setting">
+            <div class="signup">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+                <a href="">signup</a>
+            </div>
+            <div class="light-dark">
+                <a href=""> 
+                    <span class="material-symbols-outlined">
+                        wb_sunny
+                    </span>
+                </a>
+                <a href="">
+                    <span class="material-symbols-outlined">
+                        dark_mode
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="test">
+
+    </div>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    {% block part-content %}
+
+    {% endblock %}
+
+
+</body>
+</html>
