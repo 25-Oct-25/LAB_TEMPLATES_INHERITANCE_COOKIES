@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block page_title %}Our Properties{% endblock %}
+
+{% block content %}
+<div class="page-content-wrapper">
+  <div class="content-container">
+    <h2 class="page-main-title">OUR PROPERTIES</h2>
+
+    <div class="property-grid-layout">
+      {% for property in properties %}
+      <div class="property-card-box">
+        <div class="card-media-wrap">
+          <img class="card-main-image"
+               src="{% static 'images/'|add:property.image %}"
+               alt="{{ property.title }}">
+        </div>
+        <div class="card-details-footer">
+          <h3 class="card-item-title">{{ property.title }}</h3>
+          <a href="#" class="card-action-btn">MORE</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+{% endblock %}
