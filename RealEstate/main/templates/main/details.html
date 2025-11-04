@@ -1,0 +1,44 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}View Detailes{% endblock %}
+{% block header%}Detailes{% endblock %}
+{% block content %}
+
+<section class="img-setion">
+    <div class="slider-wrapper">
+        <div class="slider">
+            {% for property in properties %}
+                <img id='slider-{{forloop.counter}}' src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
+            {% endfor %}
+        </div>
+        <div class="slider-nav">
+            <a href="#slider-1"></a>
+            <a href="#slider-2"></a>
+            <a href="#slider-3"></a>
+        </div>
+    </div>
+</section>
+
+<section class="discrpthion-section">
+    <div class="discrption-continer">
+        <div class="villa-discrption">
+            <h1>Villa : </h1>
+            <p>Villan for sell price is : $999000</p>
+        </div>
+        <div class="villa-loction">
+            <div class="map-container">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.841171857219!2d46.67529587536609!3d24.71355157709614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f038d3b3d3c4d%3A0x57d76c3b3e402c7a!2sRiyadh!5e0!3m2!1sen!2ssa!4v1695747749382!5m2!1sen!2ssa"
+                width="100%"
+                height="450"
+                style="border:0; border-radius:15px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Properties{% endblock %}
+{% block header%}Properties{% endblock %}
+{% block content %}
+<section class="properties-page">
+    <div class="properties-grid">
+        {% for property in properties %}
+        <div class="property-card large">
+            <div class="property-image">
+                <img src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
+            </div>
+            <h3>{{ property.title }}</h3>
+            <!-- <button class="view-details-btn" type='' onclick="window.location.href='{% url 'view_details' %}">View Details</button> -->
+            <form action="{% url 'view_details' %}" method="get">
+                <button class="view-details-btn" type="submit">View Details</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

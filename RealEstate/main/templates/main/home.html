@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block header%}Home{% endblock %}
+{% block content %}
+<section class="hero-section">
+    <h1>FIND YOUR <span class="dreams-text">DREAMS</span></h1>
+    <p>Our catalog will surprise you with unprecedented offers of luxury properties.</p>
+    <a href="{% url 'properties' %}" class="explore-btn">Explore Properties</a>
+</section>
+
+<section class="products-review">
+    <div class="container-products">
+        <a href="#" class="product-link active">
+            <span class="material-symbols-outlined">home</span>
+            <p>ALL</p>
+        </a>
+        <a href="#" class="product-link">
+            <span class="material-symbols-outlined">apartment</span>
+            <p>PROPERTIES</p>
+        </a>
+        <a href="#" class="product-link">
+            <span class="material-symbols-outlined">hotel</span>
+            <p>HOTEL</p>
+        </a>
+        <a href="#" class="product-link">
+            <span class="material-symbols-outlined">villa</span>
+            <p>VILLA</p>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

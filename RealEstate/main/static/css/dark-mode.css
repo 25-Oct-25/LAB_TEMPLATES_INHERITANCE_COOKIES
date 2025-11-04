@@ -1,0 +1,13 @@
+body.dark-mode .wrapper {
+    background-image: url("/static/images/skyscraper-dark.jpg");
+    padding: 4rem 8rem;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+body.dark-mode .property-card,
+body.dark-mode .contact-item {
+    background-color: #2d2d2d;
+    box-shadow: 0 10px 20px rgba(255,255,255,0.05);
+}
