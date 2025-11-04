@@ -10,11 +10,11 @@ Your Dreams {% endblock title %} {% block nav_class %} position-absolute w-100
           DREAMS
         </h1>
 
-        <p class="custom-hero-text mb-4">
+        <h6 class="custom-hero-text mb-4">
           Discover an unparalleled selection of luxury properties designed to
           meet your lifestyle. Explore opportunities that redefine modern living
           and elegance. 
-          <form action="{% url 'main:toggle_font' %}" method="POST" style="display:inline;">
+         <form action="{% url 'main:toggle_font' %}" method="POST" style="display:inline;">
             {% csrf_token %}
             <button type="submit" class="btn btn-link text-decoration-none p-0 ps-2" id="fontToggleBtn">
             
@@ -25,7 +25,9 @@ Your Dreams {% endblock title %} {% block nav_class %} position-absolute w-100
               <i class="fa fa-search-minus dark-mode-icon d-none" id="fontMinusDark"></i>
             </button>
           </form>
-        </p>
+
+        </h6>
+         
 
         <a
           href="{% url 'main:properties_view' %}"

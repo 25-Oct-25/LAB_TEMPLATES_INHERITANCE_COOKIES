@@ -22,6 +22,12 @@ def contact_view(request:HttpRequest):
 
     return render(request, "main/contact.html")
 
+def services_view(request:HttpRequest):
+    return render(request, "main/services.html")
+
+def about_view(request:HttpRequest):
+    return render(request, "main/about.html")
+
 
 def toggle_font(request):
     response = redirect(request.META.get('HTTP_REFERER', '/'))

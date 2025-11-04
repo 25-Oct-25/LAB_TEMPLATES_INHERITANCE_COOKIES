@@ -60,7 +60,7 @@
             class="navbar-nav mb-2 mb-lg-0 custom-nav-links rounded-pill px-4"
           >
             <li class="nav-item">
-              <a class="nav-link active" href="{% url 'main:home_view' %}"
+              <a class="nav-link" href="{% url 'main:home_view' %}"
                 >Home</a
               >
             </li>
@@ -70,10 +70,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="{% url 'main:services_view' %}">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="{% url 'main:about_view' %}">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'main:contact_view' %}"

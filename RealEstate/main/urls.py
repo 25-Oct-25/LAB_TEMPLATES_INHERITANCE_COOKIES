@@ -8,4 +8,6 @@ urlpatterns = [
     path("properties/", views.properties_view, name="properties_view"),
     path("contact/", views.contact_view, name="contact_view"),
     path('toggle-font/', views.toggle_font, name='toggle_font'),
+    path("services/", views.services_view, name="services_view"),
+    path("about/", views.about_view, name="about_view"),
 ]

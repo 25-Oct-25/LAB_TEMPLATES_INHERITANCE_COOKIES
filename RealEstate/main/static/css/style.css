@@ -11,7 +11,7 @@
 
   --contact-phone-link-light: #0d6efd;
 
-  --contact-bg-light: url("/static/images/email.jpg");
+  --contact-bg-light: url("/static/images/contactus.jpg");
 
   --hero-bg-light: url("/static/images/skyscraper.jpeg");
   --hero-bg-dark: url("/static/images/skyscraper-dark.jpg");
@@ -89,7 +89,7 @@ body {
 
 .custom-nav-links .nav-link:hover,
 .custom-nav-links .nav-link.active {
-  color: #000000;
+  color:  #618ccd;
   font-weight: 600;
 }
 
@@ -298,4 +298,21 @@ body {
 }
 [data-bs-theme="dark"] .dark-mode-icon {
   color: #fff !important;
+}
+
+
+.custom-hero-text form {
+    display: inline-block !important;
+    margin: 0; 
+    padding: 0;
+}
+
+.navbar-brand {
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; 
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    color: #618ccd;
 }
