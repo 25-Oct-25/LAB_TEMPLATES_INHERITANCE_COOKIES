@@ -1,0 +1,77 @@
+body {
+    position: relative;
+    background-color: #e1dfdf;
+    min-height: 100vh;
+    background-image: url("/static/images/email.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 155px;
+    margin-right: 80px;
+    position: relative;
+}
+
+
+.contact-main .info h3 {
+    font-size: 26px;
+    font-weight: 500;
+    position: absolute;
+    top: 22px;
+}
+
+.telephone {
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: 130px;
+}
+
+.telephone a {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+.email{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 500;
+    bottom: 0;
+    top: 180px;
+       
+}
+
+.email a {
+    color: blue;
+    border-bottom: 2px solid blue;
+    
+
+    
+}
+.address {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 500;
+    bottom: 0;
+    top: 240px;
+}
+
+.address-info {
+    position: absolute;
+    bottom: 30px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.map iframe{
+    margin-right: 110px;
+    margin-top: 30px;
+    width: 750px;
+    height: 330px;
+    border-radius: 25px;
+}

@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block title %}Properties{% endblock %}
+
+{% block fileStyle %}
+<link rel="stylesheet" href="{% static 'css/properties.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="properties-main">
+
+    <div class="text">
+        <h1>Our Properties</h1>
+    </div>
+    <div class="cards">
+    {% for prop in properties %}
+        <div class="property-card">
+            <img src="/static/images/{{ prop.image }}" alt="property photo">
+            <h3>{{ prop.title }}</h3>
+            <a href="#">more</a>
+        </div>
+    {% endfor %}
+</div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block fileStyle %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="home-main">
+    <h1>Find Your Dreams</h1>
+    <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.
+        Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+    <a href="{% url 'main:properties_view' %}">Explore Properties</a>
+</div>
+
+<div class="home-footer">
+    <div>
+        <a href="" class="home-a"><span class="material-symbols-outlined" id="home">home</span>All</a>
+    </div>
+    <div>
+        <a href="{% url 'main:properties_view' %}" class="factory-a"><span class="material-symbols-outlined" id="factory">factory</span>Properties</a>
+    </div>
+    <div>
+        <a href="" class="hotel-a"><span class="material-symbols-outlined" id="hotel">hotel</span>Hotel</a>
+    </div>
+    <div>
+        <a href="" class="villa-a"><span class="material-symbols-outlined" id="villa">villa</span>Villa</a>
+    </div>
+</div>
+
+
+
+{% endblock %}

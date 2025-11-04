@@ -1,0 +1,200 @@
+body {
+    background-image: url("/static/images/skyscraper.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 110vh;
+    
+}
+
+.home-main {
+    width: 900px;
+    margin-left: 150px;
+    margin-top: 15px;
+}
+
+.home-main h1 {
+    font-size: 115px;
+    font-weight: 480;
+    animation-name: mainText;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+
+@keyframes mainText {
+    0%   { transform: scale(0) translateX(-300px);
+            color: rgba(0, 0, 0, 0);}
+
+    
+    100% { transform: scale(1) translateX(0) }
+}
+
+
+.home-main p {
+    width: 600px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.home-main a {
+    background-color: black;
+    padding: 7px 25px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+.home-footer {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    height: 100px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 135px;
+    transform: translateX(-55%);
+    padding: 20px 80px;
+    border-radius: 55px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.home-footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-a {
+    color: #1C6F2F;
+}
+
+#home {
+    background-color: #C7EABF;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+.factory-a {
+    color: #8B5E1A;
+    position: relative;
+    margin-top: 51px;
+}
+#factory {
+    background-color: #E8D1A9;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -49px;
+    left: 10px;
+}
+
+
+.hotel-a {
+    color: #B436A7;
+}
+#hotel {
+    background-color: #E6B8E6;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+.villa-a {
+    color: #2C3AA1;
+}
+#villa {
+    background-color: #C3C7F0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+/* Dark Mode */
+
+body.dark {
+    background-image: url("/static/images/skyscraper-dark.jpg"); 
+}
+
+body.dark .index-main h1 {
+    color: white;
+}
+
+body.dark .index-main p {
+    color: white;
+}
+
+body.dark .index-main a {
+    background-color: white;
+    color: black;
+}
+
+body.dark .home-footer {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .home-a {
+    color: white;
+}
+
+body.dark #home {
+    background-color: #2f4f3a;
+    color: #C7EABF;
+}
+
+body.dark .factory-a {
+    color: white;
+}
+
+body.dark #factory {
+    background-color: #5c4420;
+    color: #E8D1A9 ;
+}
+
+body.dark .hotel-a {
+    color: white;
+}
+
+body.dark #hotel {
+    background-color: #6b2f6e;
+    color: #E6B8E6 ;
+}
+
+body.dark .villa-a {
+    color: white;
+}
+
+body.dark #villa {
+    background-color: #2f355f;
+    color: #C3C7F0 ;
+}

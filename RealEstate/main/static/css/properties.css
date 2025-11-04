@@ -1,0 +1,117 @@
+body {
+    position: relative;
+    background-color: #e1dfdf;
+    height: auto;
+    min-height: 145vh;
+}
+
+.properties-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: auto;
+}
+
+.properties-main .text {
+    position: absolute;
+    left: 150px;
+
+
+}
+
+.properties-main .text h1 {
+    font-weight: 450;
+    font-size: 23px;
+}
+
+.properties-main .cards {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 35px;
+    width: 1150px;
+    flex-wrap: wrap;
+
+}
+
+.properties-main .cards .property-card {
+    background-color: #d1cfcf;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-bottom: 14px;
+    position: relative;
+
+}
+
+.properties-main .cards .property-card h3 {
+    margin-top: 15px;
+    font-weight: 450;
+    margin-left: 10px;
+
+}
+
+.properties-main .cards .property-card a {
+    background-color: black;
+    color: white;
+    margin-left: 285px;
+    padding: 7px 25px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+img {
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
+    width: 370px;
+    height: 220px;
+}
+
+
+/* Dark Mode */
+
+body.dark {
+    background-color: #121212;
+}
+
+body.dark .properties-main .text h1 {
+    color: white;
+}
+
+body.dark .properties-main .cards .property-card {
+    background-color: white;
+    border: 1px solid #333;
+}
+
+body.dark .properties-main .cards .property-card h3 {
+    color: black;
+}
+
+body.dark .properties-main .cards .property-card a {
+    background-color: black;
+    color: white;
+    margin-left: 285px;
+    padding: 7px 25px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+body.dark .properties-main .cards .property-card a:hover {
+    background-color: white;
+    color: black;
+}
+
+body.dark img {
+    opacity: 0.95;
+}
