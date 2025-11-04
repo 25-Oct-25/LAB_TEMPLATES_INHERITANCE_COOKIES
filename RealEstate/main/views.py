@@ -24,18 +24,8 @@ def contact_view(request:HttpRequest):
 
 #light-dark mood cookies
 
-#light mood
-def light_mode_view(request: HttpRequest):
-
-    response = redirect ("main:home_view")
-    response.set_cookie("mode", "dark", max_age=3600)
-
-    return response
-
-#dark mood
-def dark_mode_view(request: HttpRequest):
-
-    response = redirect ("main:home_view")
-    response.set_cookie("mode", "dark", max_age=60*60*24)
-
+def set_theme_view(request: HttpRequest, theme : str):
+    response = redirect(request.META.get('HTTP_REFERER','/'))
+    if theme in ['light', 'dark']:
+        response.set_cookie('theme', theme, max_age=365*24*60*60)
     return response

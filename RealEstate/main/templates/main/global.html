@@ -1,9 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en"
-{% if 'mode'  in request.COOKIES %}
-    class="dark"
-{% endif %}>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,14 +13,14 @@
     <title> {% block title %} {% endblock %} </title>
     {% block style_head %}{% endblock %}
 </head>
-<body>
+<body class = "{% if request.COOKIES.theme == 'dark' %} dark-mode {% endif %}">
 
     <div class="stick-header">
         
     </div>
     <header>
         <div class="home-logo">
-            <a href="{% url 'main:home_view' %}">
+            <a href="/">
                 HOME
             </a>
         </div>
@@ -64,13 +61,13 @@
                 <a href="">signup</a>
             </div>
             <div class="light-dark">
-                <a href="{% url 'main:light_mode_view' %}"> 
-                    <span class="material-symbols-outlined {% if not 'mode' in request.COOKIES %} light-mode {% endif %}">
+                <a href=""> 
+                    <span class="material-symbols-outlined">
                         wb_sunny
                     </span>
                 </a>
-                <a href="{% url 'main:dark_mode_view'%}">
-                    <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} dark-mode {% endif %}">
+                <a href="">
+                    <span class="material-symbols-outlined">
                         dark_mode
                     </span>
                 </a>

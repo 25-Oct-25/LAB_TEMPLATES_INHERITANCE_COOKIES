@@ -9,10 +9,14 @@
     font-style: normal;  
 }
 
-html.dark
+/* dark mode */
+body.dark-mode
 {
-    color: #fff;
-    background-color: gray;
+    --bg-color: #121212;
+    --text-color:#f5f5f5;
+    --card-bg: #1e1e1e;
+    --nav-bg: #222;
+    --accent-color: #ff2c2c;
 }
 
 html
@@ -40,10 +44,7 @@ a
     color: black;
     text-decoration: none;
 }
-html.dark a
-{
-    color: #fff;
-}
+
 .home-logo a
 {
     font-size: 2rem;
@@ -74,10 +75,7 @@ header nav ul
     border-radius: 50px;
 }
 
-html.dark header nav ul
-{
-    background-color: #000;
-}
+
 header nav ul li a:hover
 {
     color: red;
@@ -151,6 +149,11 @@ main
     align-items: center;
 }
 
+body.dark-mode main
+{
+    background: url('/static/images/skyscraper-dark.jpg') center/cover no-repeat;
+}
+
 section
 {
     width: 100%;
@@ -163,13 +166,21 @@ section
     /* border: 1px solid black; */
 }
 
+@keyframes text-fade {
+  0% { opacity: 1; } /* Start fully visible */
+  50% { opacity: 0.2; } /* Fade to nearly transparent */
+  100% { opacity: 1; } /* End fully visible (to loop seamlessly) */
+}
+
 section h1
 {
     font-size: 3cm;
     text-align: left;
     font-weight: 500;
     padding-bottom: 30px;
+    animation: text-fade 2s ease-in-out infinite alternate;
 }
+
 
 section p
 {
@@ -202,10 +213,7 @@ section a
     padding-bottom: 70px;
     /* Here will edit if we want the item over-up */
 }
-html.dark .part-content
-{
-    background-color: #343434;
-}
+
 .part-content ul
 {
     position: fixed;
@@ -225,10 +233,7 @@ html.dark .part-content
     margin-bottom: 0px;
 }
 
-html.dark .part-content ul
-{
-    background-color: #000;
-}
+
 
 .part-content ul li
 {

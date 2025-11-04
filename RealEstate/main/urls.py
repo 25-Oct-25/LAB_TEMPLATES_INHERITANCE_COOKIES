@@ -8,6 +8,6 @@ urlpatterns = [
     path("",views.home_view, name="home_view"),
     path("properties/", views.properties_view, name="properties_view"),
     path("contact/", views.contact_view, name="contact_view"),
-    path("mood/light/",views.light_mode_view, name="light_mode_view"),
-    path("mood/dark/",views.dark_mode_view, name="dark_mode_view")
+    path("home/", views.home_view, name="home"),
+    path("theme/<str:theme>/", views.set_theme_view, name="set_theme")
 ]
