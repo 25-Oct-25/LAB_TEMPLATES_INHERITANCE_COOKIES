@@ -405,52 +405,6 @@ body {
     }
 }
 
-/* @media (max-width: 1200px) {
-    .wrapper {
-        padding: 2rem 4rem;
-    }
-    
-    .hero-section h1 {
-        font-size: 4rem;
-    }
-    
-    .hero-section p {
-        width: 100%;
-    }
-    
-    .properties-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .wrapper {
-        padding: 1rem 2rem;
-    }
-    
-    .nav-bar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .mid-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .hero-section h1 {
-        font-size: 3rem;
-    }
-    
-    .properties-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .full-grid {
-        grid-template-columns: 1fr;
-    }
-} */
-
 .map-container {
     margin-top: 2rem;
     width: 100%;
