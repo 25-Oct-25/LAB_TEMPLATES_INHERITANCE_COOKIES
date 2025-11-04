@@ -8,6 +8,18 @@
     font-weight: 400;
     font-style: normal;  
 }
+
+html.dark
+{
+    color: #fff;
+    background-color: gray;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
 header
 {
     gap: 170px;
@@ -31,13 +43,15 @@ a
 
 .home-logo a
 {
-    font-size: xx-large;
+    font-size: 2rem;
     font-weight: 500;
+    transition: font-size 1.5s , color 2.5s;
 }
 
 .home-logo a:hover
 {
     color: red;
+    font-size: 2.5rem;
 }
 
 header nav ul
@@ -97,9 +111,34 @@ header nav ul li a:hover
     justify-content: center;
 }
 
-.setting .light-dark .light-mode
+.setting .light-dark span
 {
-    padding-right: 7px;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+}
+/* --
+.setting .light-dark .light-icon
+{
+    
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+    
+}
+
+.setting .light-dark .dark-icon
+{
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+}
+--*/
+.setting .light-dark .light-mode, .setting .light-dark .dark-mode
+{
+    margin: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
 }
 
 /* ---- */

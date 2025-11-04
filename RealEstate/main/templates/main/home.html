@@ -5,15 +5,21 @@
     Home
 {% endblock %}
 
+
 <!--
     {% block style_head %}
         <style>
-        main{
-            background-image: ;
-        }
+            html.dark main
+            {     
+                background-image: url("/static/images/skyscraper-dark.jpg");
+            }
         </style>
     {% endblock %}
 -->
+
+
+
+
 
 
 {% block content %}
@@ -26,7 +32,7 @@
         Our catalog will surprise you. Rather, discover an unprcendented offers of luxury properties. Our <br>
         catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.
     </p>
-    <a href="btn">
+    <a href="{% url 'main:properties_view' %}">
         Expolore Properties
     </a>
 </section>

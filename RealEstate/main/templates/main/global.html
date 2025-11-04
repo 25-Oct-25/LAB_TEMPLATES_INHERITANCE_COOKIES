@@ -1,6 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+{% if 'mode' in request.COOKIES %}
+    class="dark"
+{% endif%}
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,16 +64,16 @@
                 <a href="">signup</a>
             </div>
             <div class="light-dark">
-                <div class="light-mode">
-                    <span class="material-symbols-outlined">
+                <a href="{% url 'main:light_view' %}"> 
+                    <span class="material-symbols-outlined" {% if 'mode' in request.COOKIES %} light-mode {% endif %}>
                         wb_sunny
                     </span>
-                </div>
-                <div class="dark-mode">
-                    <span class="material-symbols-outlined">
+                </a>
+                <a href="{% url 'main:dark_view' %}">
+                    <span class="material-symbols-outlined" {% if 'mode' in request.COOKIES %} dark-mode {% endif %}>
                         dark_mode
                     </span>
-                </div>
+                </a>
             </div>
         </div>
     </header>
