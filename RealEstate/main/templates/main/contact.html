@@ -1,0 +1,65 @@
+{% extends "main/base.html" %} {% block title %} Contact Us - Find Your Dreams
+{% endblock title %} 
+{% block extra_css %}
+<style>
+  body {
+    background-image: var(--contact-bg-light);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-color: var(--bs-body-bg);
+  }
+
+  [data-bs-theme="dark"] body {
+    background-image: none !important;
+  }
+</style>
+{% endblock extra_css %} 
+
+{% block content %}
+<section class="mt-5 container py-5">
+  <h2 class="text-uppercase mb-3 fw-bold mt-2">Contact Us</h2>
+  <div class="row g-5">
+    <div class="col-md-4">
+      <div class="mb-4">
+        <h6 class="text-uppercase text-muted">Telephone:</h6>
+        <a href="tel:+96657263883764" class="text-decoration-none fw-semibold">
+          +966 57263883764
+        </a>
+      </div>
+      <div class="mb-4">
+        <h6 class="text-uppercase text-muted">Email:</h6>
+        <a
+          href="mailto:info@realestate.com"
+          class="text-decoration-none fw-semibold"
+        >
+          info@realestate.com
+        </a>
+      </div>
+      <div>
+        <h6 class="text-uppercase text-muted">Address:</h6>
+        <address class="small mb-0">
+          Anas bin Malik, Riyadh<br />
+          Building W-112<br />
+          Saudi Arabia
+        </address>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.3357822098424!2d46.644123525989826!3d24.818188046950343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee40eefcb6a9d%3A0xbc4308498520f827!2z2LfYsdmK2YIg2KPZhtizINin2KjZhiDZhdin2YTZg9iMINin2YTYsdmK2KfYtg!5e0!3m2!1sar!2ssa!4v1762179293595!5m2!1sar!2ssa"
+        width="700"
+        height="350"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-4"
+      ></iframe>
+    </div>
+  </div>
+</section>
+{% endblock content %}

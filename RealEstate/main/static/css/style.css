@@ -1,0 +1,286 @@
+:root {
+  --primary-text-light: #000000;
+  --primary-text-dark: #000;
+  --secondary-text-light: rgba(0, 0, 0, 0.75);
+  --secondary-text-dark: rgba(0, 0, 0, 0.75);
+  --main-bg-light: #f8f9fa;
+  --box-bg-light: #fff;
+  --navbar-links-bg-light: #e9ecef;
+  --category-bg-light: rgba(255, 255, 255, 0.6);
+  --category-icon-light: #dee2e6;
+
+  --contact-phone-link-light: #0d6efd;
+
+  --contact-bg-light: url("/static/images/email.jpg");
+
+  --hero-bg-light: url("/static/images/skyscraper.jpeg");
+  --hero-bg-dark: url("/static/images/skyscraper-dark.jpg");
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #343a40;
+  --bs-body-color: var(--primary-text-light);
+  --primary-text-light: #ffffff;
+  --secondary-text-light: rgba(255, 255, 255, 0.75);
+
+  --main-bg-dark: #343a40;
+  --box-bg-dark: #212529;
+  --navbar-links-bg-dark: #343a40;
+  --category-bg-dark: rgba(33, 37, 41, 0.6);
+  --category-icon-dark: #495057;
+  --contact-bg-dark: #343a40;
+  --contact-phone-link-dark: #66b2ff;
+}
+
+/* [data-bs-theme="dark"] body {
+ background-image: none !important;
+} */
+[data-bs-theme="dark"] .custom-navbar .d-flex a.nav-link,
+[data-bs-theme="dark"] .custom-navbar .d-flex button {
+  color: #fff;
+}
+
+body {
+  /* background-color: var(--bs-body-bg); */
+  color: var(--bs-body-color);
+  font-family: "Phudu", sans-serif;
+}
+
+/* =========================
+   Navbar 
+========================= */
+.custom-navbar {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 1rem 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+}
+
+.custom-navbar .navbar-collapse {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.custom-nav-links {
+  background-color: var(--navbar-links-bg-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+}
+
+[data-bs-theme="dark"] .custom-nav-links {
+  background-color: var(--navbar-links-bg-dark);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: var(--primary-text-dark);
+  transition: color 0.3s;
+}
+
+[data-bs-theme="dark"] .custom-navbar .navbar-brand,
+[data-bs-theme="dark"] .custom-navbar .nav-link {
+  color: var(--primary-text-light) !important;
+}
+
+.custom-nav-links .nav-link:hover,
+.custom-nav-links .nav-link.active {
+  color: #000000;
+  font-weight: 600;
+}
+
+.custom-navbar .d-flex a.nav-link,
+.custom-navbar .d-flex button {
+  color: #000000;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.custom-hero-section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: var(--primary-text-light);
+  background-image: var(--hero-bg-light);
+}
+
+[data-bs-theme="dark"] .custom-hero-section {
+  background-image: var(--hero-bg-dark);
+}
+
+.custom-hero-title {
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.custom-hero-text {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: var(--secondary-text-light);
+}
+
+/* =========================
+   Category Bar
+========================= */
+.custom-category-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  z-index: 10;
+  padding: 15px 40px;
+  background-color: var(--category-bg-light);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+[data-bs-theme="dark"] .custom-category-bar {
+  background-color: var(--category-bg-dark);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.category-item {
+  text-align: center;
+  color: var(--primary-text-dark);
+}
+
+[data-bs-theme="dark"] .category-item {
+  color: var(--primary-text-light);
+}
+
+.category-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  background-color: var(--category-icon-light);
+}
+
+[data-bs-theme="dark"] .category-icon-wrapper {
+  background-color: var(--category-icon-dark);
+}
+
+.category-icon-wrapper i {
+  font-size: 1.5rem;
+  color: var(--primary-text-dark);
+}
+
+[data-bs-theme="dark"] .category-icon-wrapper i {
+  color: var(--primary-text-light);
+}
+
+.icon-red {
+  color: #dc3545;
+}
+.icon-orange {
+  color: #fd7e14;
+}
+.icon-purple {
+  color: #6f42c1;
+}
+.icon-blue {
+  color: #0d6efd;
+}
+
+/* =========================
+   Properties Page
+========================= */
+.properties-page {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  background-color: var(--main-bg-light);
+}
+
+[data-bs-theme="dark"] .properties-page {
+  background-color: var(--main-bg-dark);
+}
+
+.property-card {
+  border: none;
+  background-color: var(--box-bg-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+[data-bs-theme="dark"] .property-card {
+  background-color: var(--box-bg-dark);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* =========================
+   Contact Page
+========================= */
+/* .contact-page {
+
+    background-image: var(--contact-bg-light);
+
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+
+[data-bs-theme="dark"] .contact-page {
+  background-color: var(--contact-bg-dark);
+  background-image: none;
+}
+
+.contact-info {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info a {
+  color: var(--contact-phone-link-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+[data-bs-theme="dark"] .contact-info a {
+  color: var(--contact-phone-link-dark);
+}
+
+.contact-page .ratio {
+  max-width: 100%;
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUpFade 1.2s ease-out forwards;
+}
