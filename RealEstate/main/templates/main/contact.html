@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+
+{% block background%}
+<style>
+  .wrapper {
+    background-image: url('/static/resources/email.jpg');
+
+  }
+
+  body.dark .wrapper {
+    background-image: url('/static/resources/email.jpg');
+  }
+</style>
+{% endblock%}
+{% block title %}Contact{% endblock %}
+{% block content%}
+<div class="section ">
+  <h1 class="font-medium text-2xl ">Contact Us</h1>
+  <div class="contact">
+    <section class="info">
+      <div class="font-medium">Telephone: <a href="#">+966 57286757867</a></div>
+      <div class="font-medium">
+        Email: <a href="#">info@realeastate.com</a>
+      </div>
+      <div class="font-medium">
+        Address:
+
+      </div>
+      <p class="text-xs font-medium">anas bin malik, Riyadh<br /> Buliding w-112 <br /> saudi Arabia</p>
+    </section>
+    <section class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.083209090641!2d46.73024257587885!3d24.82682787795129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efc6d472d42af%3A0x24b3a53de9cbc5c3!2z2KjYp9ix2YMg2KfZgdmG2YrZiA!5e0!3m2!1sar!2ssa!4v1762234085174!5m2!1sar!2ssa"
+        width="650" height="310" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </div>
+</div>
+{% endblock %}

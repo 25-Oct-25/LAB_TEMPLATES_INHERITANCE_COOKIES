@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+{% block title %}Home{% endblock %}
+{% block content%}
+<main>
+    <section class="header-home">
+        <div class="top-content">
+           <a href="" class="grow-move"><h1>FIND YOUR DREAMS</h1></a> 
+            <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our
+                catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+            <a href="{% url 'main:properties_view' %}" class="btn">Expolore Properties</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="icons-section flex row ">
+            <div class="icons">
+                <span class="material-symbols-outlined house">
+                    house
+                </span>
+                <p class="text-[#39c455]">ALL</p>
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined factory">
+                    factory
+                </span>
+                <p class="text-[#bf7129]">PROPERTIES</p>
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined hotel">
+                    hotel
+                </span>
+                <p class="text-[#da47b3]">HOTEL</p>
+            </div>
+            <div class="icons">
+                <span class="material-symbols-outlined villa">
+                    villa
+                </span>
+                <p class="text-[#1010c4]">VILLA</p>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

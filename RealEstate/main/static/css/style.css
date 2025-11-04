@@ -1,0 +1,298 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Phudu", sans-serif;
+    font-style: normal;
+     font-optical-sizing: auto;
+    box-sizing: border-box;
+}
+body.dark {
+  --bg-color: #242424;
+  --text-color: white;
+  --nav-bg: #3c3c3c;
+}
+
+body {
+  --bg-color: rgb(219, 219, 219);;
+  --text-color: black;
+  --nav-bg: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+.wrapper {
+    background-image: url('/static/resources/skyscraper.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 44vw;
+}
+body.dark .wrapper{
+  background-image: url('/static/resources/skyscraper-dark.jpg');
+}
+
+.logo {
+    font-size: 2.3rem;
+    font-weight: 500;
+    gap: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 7.5rem 1rem 7.5rem ;
+
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--nav-bg);
+    border-radius: 35px;
+    padding: 1.2rem 5.8rem;
+    gap: 2.7rem;
+    font-size: 12px;
+}
+
+.center-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header-home {
+    display: flex;
+    align-items: center;
+    padding: 0rem 7.5rem;
+
+}
+
+.header-home h1 {
+    font-weight: 500;
+    font-size: 7.5rem;
+    font-style:normal;
+    line-height: 1.2;
+}
+
+.header-home p{
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    gap: 1.5rem;
+}
+
+.btn {
+    background-color: black;
+    border-radius: 25px;
+    color: white;
+    padding: 0.4rem 1.5rem;
+    text-align: center;
+    width: 11rem;
+    font-size: 12px;
+
+}
+
+.categories {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.icons-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav-bg);
+    border-radius: 65px;
+    width: 45%;
+    padding: 1rem 2.5rem;
+    gap: 4.8rem;
+
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.icons-nav{
+    align-items: center;
+    justify-content: center;
+}
+.material-symbols-outlined{
+    padding: 5px 5px;
+}
+
+.active-icon{
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    border-radius:50%;
+}
+
+.house{
+    color: #39c455;
+    background-color: #b2ecbc;
+    border-radius:20px;
+    padding: 8px 8px;
+
+}
+
+.factory{
+    color: #bf7129;
+    background-color: #e3d1b8;
+    border-radius:20px;
+    padding: 8px 8px
+}
+.hotel{
+    color: #da47b3;
+    background-color: #f9b7fe;
+    border-radius:20px;
+    padding: 8px 8px
+}
+.villa{
+    color: #1010c4;
+    background-color: #b3b3e3;
+    border-radius:20px;
+    padding: 8px 8px
+}
+
+
+.section {
+    padding: 1rem 7.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    gap: 25px;
+    justify-content: start;
+    padding-top: 1.4rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 270px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.card img {
+    width: 310px;
+    height: 190px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card p{
+    padding: 20px 0 5px 20px;
+    justify-content: center;
+    color: black;
+}
+.card a{
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 0.3rem 0.5rem;
+    width: 4rem;
+    font-size: 10px;
+    
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding-top: 4rem;
+}
+.info div a{
+    color: #1212dc;
+    text-decoration: underline;
+}
+.nav-links a:hover,
+.icons-nav a:hover,
+.logo:hover{
+  color: rgb(255, 91, 91);
+  animation: bgZoom 1s;
+  cursor: pointer; 
+}
+@keyframes bgZoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+.grow-move {
+  display: inline-block;
+  transition: all 0.9s ease;
+  animation: growRight 0.9s ;
+  cursor: pointer;
+}
+
+.grow-move:hover {
+  animation: growRight 0.9s ;
+}
+
+@keyframes growRight {
+  0% {
+    transform: scale(0) translateX(-300px);
+  }
+  100% {
+    transform: scale(1) translateX(0px);
+  }
+}
+
+.more-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: var(--nav-bg);
+    width: 610px;
+    border-radius: 40px;
+    padding: 1.7rem 0rem;
+    gap: 10px;
+    margin: 0 auto;
+   
+}
+.more-info img{
+    width: 610px;
+    height: 300px;
+    
+}
+
