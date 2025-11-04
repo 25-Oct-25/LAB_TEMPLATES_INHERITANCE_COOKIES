@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block wrapper_class %}index-wrapper{% endblock %}
+
+{% block content %}
+
+
+<section class="top-content">
+    <h1 class="animated-title">FIND YOUR<br>DREAMS</h1>
+    <p class="description">
+        Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+        Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+    </p>
+
+   <a href="{% url 'main:properties_list' %}" class="explore-btn">Explore Properties</a>
+    <div class="categories-wrapper">
+        <div class="categories">
+            <div class="category-item">
+                <span class="material-symbols-outlined icon-green">house</span>
+                <span class="category-label label-green">ALL</span>
+            </div>
+            <div class="category-item">
+                <span class="material-symbols-outlined icon-orange">apartment</span>
+                <span class="category-label label-orange">PROPERTIES</span>
+            </div>
+            <div class="category-item">
+                <span class="material-symbols-outlined icon-purple">airline_seat_individual_suite</span>
+                <span class="category-label label-purple">HOTEL</span>
+            </div>
+            <div class="category-item">
+                <span class="material-symbols-outlined icon-blue">villa</span>
+                <span class="category-label label-blue">VILLA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

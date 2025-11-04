@@ -1,0 +1,213 @@
+/*
+   Dark Mode - الوضع الليلي
+*/
+
+/* Body & Background */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
+
+body.dark-theme .wrapper {
+    background-color: #16213e;
+}
+
+/* Wrapper في الوضع الليلي */
+body.dark-theme .wrapper.index-wrapper {
+    background-image: url('/static/image/skyscraper-dark.jpg') !important;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 80%;
+}
+body.dark-theme .wrapper > * {
+    position: relative;
+   
+}
+
+body.dark-theme .wrapper.properties-wrapper {
+    background-color: #0f3460;
+}
+
+body.dark-theme .wrapper.contact-wrapper {
+    background-image: url('/static/image/email.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 80%;
+}
+
+/* Navigation */
+body.dark-theme .logo {
+    color: #ffffff;
+}
+
+body.dark-theme .logo:hover {
+    color: rgb(84, 192, 63);
+}
+
+body.dark-theme .right-nav {
+    background-color: rgba(42, 42, 42, 0.95);
+}
+
+
+body.dark-theme .right-nav a {
+    color: #ffffff;
+    text-shadow: 0 0 8px #4a90e2, 0 0 15px #4a90e2;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.dark-theme .right-nav a:hover {
+    color: #4a90e2;
+    text-shadow: 0 0 15px #4a90e2, 0 0 25px #4a90e2;
+}
+
+/* Icons */
+body.dark-theme .icons .material-symbols-outlined {
+    color: #ffffff;
+}
+
+
+/*  لون  القمر يبقى أسود */
+
+body.dark-theme .theme-toggle .moon-icon {
+    color: black !important;
+}
+
+
+body.dark-theme .icons .sign-up-btn {
+    color: #ffffff;
+}
+
+/* Main Content في الوضع الليلي */
+body.dark-theme .top-content {
+    color: #ffffff;
+}
+
+body.dark-theme .description {
+    color: #cccccc;
+}
+
+body.dark-theme .explore-btn {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+
+body.dark-theme .explore-btn:hover {
+    color: rgb(58, 212, 104);
+}
+
+/* Categories */
+body.dark-theme .categories {
+    background-color: rgba(42, 42, 42, 0.95);
+}
+
+/* Green Category */
+body.dark-theme .icon-green,
+body.dark-theme .label-green {
+    color: #ffffff;
+    text-shadow: 0 0 5px #2d8659, 0 0 10px #2d8659, 0 0 15px #2d8659;
+}
+
+body.dark-theme .category-item:hover .icon-green,
+body.dark-theme .category-item:hover .label-green {
+    color: #7CFC00;
+    text-shadow: 0 0 10px #7CFC00, 0 0 20px #7CFC00, 0 0 30px #7CFC00;
+}
+
+/* Orange Category */
+body.dark-theme .icon-orange,
+body.dark-theme .label-orange {
+    color: #ffffff;
+    text-shadow: 0 0 5px #d4923d, 0 0 10px #d4923d, 0 0 15px #d4923d;
+}
+
+body.dark-theme .category-item:hover .icon-orange,
+body.dark-theme .category-item:hover .label-orange {
+    color: #FFA500;
+    text-shadow: 0 0 10px #FFA500, 0 0 20px #FFA500, 0 0 30px #FFA500;
+}
+
+/* Purple Category */
+body.dark-theme .icon-purple,
+body.dark-theme .label-purple {
+    color: #ffffff;
+    text-shadow: 0 0 5px #9b5b9b, 0 0 10px #9b5b9b, 0 0 15px #9b5b9b;
+}
+
+body.dark-theme .category-item:hover .icon-purple,
+body.dark-theme .category-item:hover .label-purple {
+    color: #DA70D6;
+    text-shadow: 0 0 10px #DA70D6, 0 0 20px #DA70D6, 0 0 30px #DA70D6;
+}
+
+/* Blue Category */
+body.dark-theme .icon-blue,
+body.dark-theme .label-blue {
+    color: #ffffff;
+    text-shadow: 0 0 5px #4a7ba7, 0 0 10px #4a7ba7, 0 0 15px #4a7ba7;
+}
+
+body.dark-theme .category-item:hover .icon-blue,
+body.dark-theme .category-item:hover .label-blue {
+    color: #00BFFF;
+    text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF;
+}
+
+/* Properties  */
+body.dark-theme .properties {
+    background-color: transparent;
+}
+
+body.dark-theme .properties h2 {
+    color: #ffffff;
+}
+
+body.dark-theme .card {
+    background-color: rgba(42, 42, 42, 0.9);
+}
+
+body.dark-theme .card h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .card button {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+
+body.dark-theme .card button:hover {
+    color: rgb(222, 109, 92);
+}
+
+/* Contact Page   =*/
+body.dark-theme .contact-title {
+    color: #ffffff;
+}
+
+body.dark-theme .contact-label {
+    color: #ffffff;
+}
+
+body.dark-theme .contact-link {
+    color: #4a90e2;
+}
+
+body.dark-theme .contact-link:hover {
+    color: #00BFFF;
+}
+
+body.dark-theme .address-text {
+    color: #cccccc;
+}
+
+body.dark-theme .address-text p {
+    color: #cccccc;
+}
+
+/* Footer   */
+body.dark-theme footer {
+    background: #0f0f1e;
+}
+
+body.dark-theme .footer-copy {
+    color: #cccccc;
+}

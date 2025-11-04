@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+    
+    <!-- تحميل الدارك مود -->
+    {% if request.COOKIES.theme == 'dark' %}
+    <link href="{% static 'css/dark.css' %}" rel="stylesheet"/>
+    {% endif %}
+    
+    <title>{% block title %}{% endblock %}</title>
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="{% if request.COOKIES.theme == 'dark' %}dark-theme{% endif %}">
+    <div class="wrapper {% block wrapper_class %}{% endblock %}">
+        <nav>
+            <strong class="logo">HOME</strong>
+
+            <div class="right-nav">
+                <a href="{% url 'main:home_view' %}">Home</a>
+                <a href="{% url 'main:properties_list' %}">Properties</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="{% url 'main:contact' %}">Contact</a>
+                
+            </div>            
+            
+            <div class="icons">
+                <span class="material-symbols-outlined">person</span>
+                <span class="sign-up-btn">Sign up</span>
+                
+                <!-- زر تبديل الثيم مع الدائرة -->
+                
+                <a href="{% url 'main:toggle_theme' %}" class="theme-toggle">
+                 <span class="icon-circle {% if request.COOKIES.theme == 'dark' %}dark{% else %}light{% endif %}"></span>
+                 <span class="material-symbols-outlined sun-icon {% if not request.COOKIES.theme or request.COOKIES.theme == 'light' %}active{% endif %}">light_mode</span>
+                 <span class="material-symbols-outlined moon-icon {% if request.COOKIES.theme == 'dark' %}active{% endif %}">dark_mode</span>
+                </a>
+
+            </div>
+        </nav>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        
+    </div>
+     <footer id="contact">
+        <p class="footer-copy">© 2025 Sana Albushi.</p>
+    </footer>
+</body>
+</html>
