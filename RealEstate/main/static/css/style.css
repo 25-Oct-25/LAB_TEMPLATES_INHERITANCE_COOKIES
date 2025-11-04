@@ -1,0 +1,400 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Phudu', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    background-color: #e3e2dc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper */
+.wrapper {
+    position: relative;
+    padding: 40px 80px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper.index-wrapper {
+    background-image: url('/static/image/skyscraper.jpeg');
+    padding: 40px 80px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 80%;
+}
+
+.wrapper.properties-wrapper {
+    background-color: #e3e2dc;
+}
+
+.wrapper.contact-wrapper {
+    background-image: url('/static/image/email.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 80%;
+    min-height: 100vh;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 1001;
+}
+
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.logo:hover {
+    color: rgb(84, 192, 63);
+}
+
+.right-nav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    gap: 3.5rem;
+    padding: 20px 3rem;
+    border-radius: 40px;
+    background-color: white;
+    align-items: center;
+}
+
+.right-nav a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.right-nav a:hover {
+    color: rgb(151, 203, 232);
+}
+
+/* Icons */
+.icons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+nav .icons .material-symbols-outlined {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icons .sign-up-btn {
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* 
+   محتوى الصفحة الرئيسية
+    */
+.top-content {
+    font-size: 40px;
+    padding: 50px 80px;
+    max-width: 800px;
+}
+
+.description {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.explore-btn {
+    background-color: black;
+    color: white;
+    padding: 7px 25px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.explore-btn:hover {
+    color: rgb(58, 212, 104);
+}
+
+/* 
+   Animations
+    */
+.animated-title {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 
+   الفئات (Categories)
+    */
+.categories {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 14px 80px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 50px auto 10px auto;
+    width: max-content;
+    margin-left: 160px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+.category-item .material-symbols-outlined {
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.category-item span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* أيقونات الفئات - الألوان */
+.icon-green {
+    background-color: rgba(144, 238, 144, 0.4);
+    color: #2d8659;
+}
+
+.icon-orange {
+    background-color: rgba(244, 164, 96, 0.4);
+    color: #d4923d;
+}
+
+.icon-purple {
+    background-color: rgba(221, 160, 221, 0.4);
+    color: #9b5b9b;
+}
+
+.icon-blue {
+    background-color: rgba(173, 216, 230, 0.4);
+    color: #4a7ba7;
+}
+
+.label-green { color: #2d8659; }
+.label-orange { color: #d4923d; }
+.label-purple { color: #9b5b9b; }
+.label-blue { color: #4a7ba7; }
+
+/* 
+   Properties (العقارات)
+    */
+.properties {
+    text-align: left;
+    padding: 70px 40px;
+}
+
+.properties h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: 70;
+    margin-left: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 0.4fr);
+    gap: 2rem;
+    padding: 0 30px;
+}
+
+.card {
+    max-width: 330px;
+    height: 300px;
+    background-color: rgba(186, 186, 186, 0.792);
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(113, 111, 111, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    text-align: left;
+    padding: 15px 40px 0px 10px;
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.card button {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 8px 25px;
+    margin: 10px 20px 15px auto;
+    display: block;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.card button:hover {
+    color: rgb(222, 109, 92);
+}
+
+/* 
+   صفحة التواصل 
+    */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 100px;
+    gap: 100px;
+}
+
+.contact-info {
+    position: relative;
+    right: 70px;
+}
+
+.contact-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+.contact-inline {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.contact-label {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000000;
+    margin: 0;
+}
+
+.contact-link {
+    color: #064c9c;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.contact-item {
+    margin-bottom: 17px;
+}
+
+.contact-item .contact-label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.address-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1a1a1a;
+}
+
+.address-text p {
+    margin: 3px 0;
+}
+
+.map-container iframe {
+    z-index: 1;
+    float: right;
+    width: 200%;
+    height: 320px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35),
+                0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+
+/* 
+   Theme Toggle
+    */
+.theme-toggle .active {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+}
+
+
+/* 
+   Footer
+    */
+footer {
+    background: #000;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.footer-copy {
+    color: rgba(255,255,255,0.3);
+    margin-top: 5px;
+    font-size: 0.9em;
+}

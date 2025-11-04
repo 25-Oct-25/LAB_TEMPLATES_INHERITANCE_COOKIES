@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+{% block wrapper_class %}contact-wrapper{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <div class="contact-info">
+        <h1 class="contact-title">CONTACT US</h1>
+        
+        <div class="contact-item contact-inline">
+            <p class="contact-label">TELEPHONE:</p>
+            <a href="tel:+966572638764" class="contact-link">+966 572638764</a>
+        </div>
+
+        <div class="contact-item contact-inline">
+            <p class="contact-label">EMAIL:</p>
+            <a href="mailto:info@realestate.com" class="contact-link">info@realestate.com</a>
+        </div>
+
+        <div class="contact-item">
+            <p class="contact-label">ADDRESS:</p>
+            <div class="address-text">
+                <p>ANAS BIN MALIK, RIYADH</p>
+                <p>BUILDING W-112</p>
+                <p>SAUDI ARABIA</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.069042986965!2d46.72505437455369!3d24.827312377950886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efc6d472d42af%3A0x24b3a53de9cbc5c3!2sPark%20Avenue%20Mall!5e0!3m2!1sen!2ssa!4v1762290737728!5m2!1sen!2ssa"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+{% endblock %}
