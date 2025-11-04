@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse 
 from django.shortcuts import resolve_url
+from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -20,4 +21,18 @@ def properties_view(request:HttpRequest):
 def contact_view(request:HttpRequest):
 
     return render(request, "main/contact.html")
+
+
+def toggle_font(request):
+    response = redirect(request.META.get('HTTP_REFERER', '/'))
+    current_size = request.COOKIES.get('font_size', 'normal')
+
+
+    if current_size == 'normal':
+        response.set_cookie('font_size', 'large')
+    else:
+        response.set_cookie('font_size', 'normal')
+
+    return response
+
 

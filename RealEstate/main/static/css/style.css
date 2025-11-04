@@ -98,6 +98,10 @@ body {
   color: #000000;
 }
 
+/* .col-lg-8 p.custom-hero-text .button .btn-link {
+  color: #000000 !important;
+} */
+
 /* =========================
    Hero Section
 ========================= */
@@ -283,4 +287,15 @@ body {
 
 .animate-slide-up {
   animation: slideUpFade 1.2s ease-out forwards;
+}
+
+.large-font .custom-hero-text {
+  font-size: 1.5rem !important;
+}
+
+.light-mode-icon {
+  color: #000 !important;
+}
+[data-bs-theme="dark"] .dark-mode-icon {
+  color: #fff !important;
 }
