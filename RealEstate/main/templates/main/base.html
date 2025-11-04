@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}RealEstate{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="{% if theme == 'dark' %}dark{% endif %}">
+
+    <header class="header">
+        <div class="left-logo">
+            <a href="{% url 'main:home_view' %}" class="active">HOME</a>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'main:home_view' %}">Home</a>
+            <a href="{% url 'main:properties_view' %}">Properties</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="{% url 'main:contact_view' %}">Contact</a>
+        </nav>
+
+        <div class="actions">
+            <a href="#" class="signup-btn">
+                <span class="material-symbols-outlined">person</span> Sign up
+            </a>
+
+<a href="{% url 'main:set_theme' 'light' %}" 
+   class="theme-btn {% if theme == 'light' %}active{% endif %}" 
+   title="Light Mode">
+    <span class="material-symbols-outlined">light_mode</span>
+</a>
+
+<a href="{% url 'main:set_theme' 'dark' %}" 
+   class="theme-btn {% if theme == 'dark' %}active{% endif %}" 
+   title="Dark Mode">
+    <span class="material-symbols-outlined">dark_mode</span>
+</a>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+<footer class="footer">
+  <p>© 2025 Real Estate | Developed by <a href="#">Rakan Al Sedran</a></p>
+</footer>
+
+</body>
+</html>
+
