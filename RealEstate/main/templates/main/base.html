@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+
+            <a href="/" id="logo">Home</a>
+
+            <div class="center-nav">
+                <a href="/">Home</a>
+                <a href="/properties/">Properties</a>
+                <a href="#">Services</a>
+                <a href="#">about</a>
+                <a href="/contact/">Contact</a>
+            </div>
+
+            <div class="right-nav">
+                <span class="material-symbols-outlined user-icon">account_circle</span>
+                <a href="#" class="signup">Sign Up</a>
+                <span id="lightIcon" class="material-symbols-outlined">light_mode</span>
+                <span id="darkIcon" class="material-symbols-outlined">dark_mode</span>
+            </div>
+
+        </nav> <!-- End Nav -->
+    </div> <!-- End Class Wrapper -->
+
+    {% block content %}{% endblock %}
+
+    <script>
+        const body = document.body;
+        const lightIcon = document.getElementById('lightIcon');
+        const darkIcon = document.getElementById('darkIcon');
+
+        lightIcon.addEventListener('click', () => {
+            body.classList.remove('dark-mode');
+        });
+
+        darkIcon.addEventListener('click', () => {
+            body.classList.add('dark-mode');
+        });
+    </script>
+
+</body>
+</html>
