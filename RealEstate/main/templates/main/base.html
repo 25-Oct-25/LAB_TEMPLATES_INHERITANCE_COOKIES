@@ -1,0 +1,53 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+        <title>RealEstate</title>
+
+        {% block style_head %}{% endblock %}
+    </head>
+    <body class="{% if request.COOKIES.theme == 'dark' %}theme-dark{% endif %}">
+
+        <div class="wrapper {% block wrapper_class %}{% endblock %}">
+            <nav>
+                <strong class="logo">HOME</strong>
+
+                <div class="said-nav">
+                    <a href="{% url 'main:home' %}">Home</a>
+                    <a href="{% url 'main:properties' %}">Properties</a>
+                    <a href="">Services</a>
+                    <a href="">About</a>
+                    <a href="{% url 'main:contact_view' %}">Contact</a>
+                </div>
+            <div>
+                <span class="signup-inline">
+                    <img src="{% static 'images/person.jpg' %}" alt="Person Icon" class="signup-icon" />
+                    <a href="" class="signup">Sign up</a>
+                    <a href="#" id="light-mode-btn">
+                        <img src="{% static 'images/light_mode.jpg' %}" alt="Light mode" class="signup-icon theme-toggle" />
+                    </a>
+                    <a href="#" id="dark-mode-btn">
+                        <img src="{% static 'images/dark_mode.jpg' %}" alt="Dark mode" class="signup-icon theme-toggle" />
+                    </a>
+                </span>
+            </div>
+            </nav>
+
+        <main>
+            {% block content %}
+
+            
+            {% endblock content %}
+        </main>
+
+        </div> <!-- End wrapper-->
+        
+        <script src="{% static 'js/theme.js' %}"></script>
+    
+</body>
+</html>

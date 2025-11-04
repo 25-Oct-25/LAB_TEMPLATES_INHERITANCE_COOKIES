@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block wrapper_class %}home-page{% endblock %}
+
+{% block content %}
+<section class="top-contact">
+    <h1>FIND YOUR <br>
+        DREAMS</h1>
+    <p>Our catalog will surprise you.Rather,discover an unprecendented 
+    offers of luxury properties. Our <br>catalog will surprise you.Rather,
+    discover an unprecendented offers of luxury properties.
+    </p>
+    <button class="btn">Explore Properties</button>
+</section>
+
+<div class="filter-option">
+    <div class="filter">
+        <div href="#" class="filter-btn">
+            <img src="{% static 'images/house.png' %}" alt="All" class="icon">ALL        
+        </div>
+        <div class="filter-btn">
+            <img src="{% static 'images/factorry.png' %}" alt="Property" class="icon"> PROPERTIES
+        </div>
+        <div class="filter-btn">
+            <img src="{% static 'images/hotel.png' %}" alt="Hotel" class="icon"> HOTEL
+        </div>
+        <div href="#" class="filter-btn">
+            <img src="{% static 'images/vila.png' %}" alt="Villa" class="icon"> VILLA
+        </div>
+    </div>
+</div>
+{% endblock content %}
+           

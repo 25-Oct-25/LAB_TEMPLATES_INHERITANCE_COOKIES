@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% block style_head %} 
+<style> 
+   
+    .wrapper {
+        padding: 0px;
+        background-image: none;
+        background-color: #ececec;
+        margin: 0px;
+    }
+.property-header{
+    margin-top: 70px;
+}
+.property-header h1{
+    margin-top: 70px;
+}
+
+</style>
+{% endblock %}
+
+<section class="property-header">
+    <h1>OUR PROPERTIES</h1>
+    <div class="property-container">
+        <div class="property-card">
+            <img src="{% static 'images/vIlla1.jpg' %}" alt="Property 1">
+            <h3>VILLA MODERN IN MALGA</h3>
+            <div class="card-footer">
+                <button class="btn-more">more</button>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="{% static 'images/vIlla2.jpg' %}" alt="Property 2">
+            <h3>GREAT HOME FOR YOU IN RIMAL</h3>
+            <div class="card-footer">
+                <button class="btn-more">more</button>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="{% static 'images/vIlla3.jpg' %}" alt="Property 3">
+            <h3>VILLA WITH 8 BEDROOMS IN SWEDEY</h3>
+            <div class="card-footer">
+                <button class="btn-more">more</button>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="{% static 'images/vIlla4.jpg' %}" alt="Property 4">
+            <h3>AMAZING VILLA IN HITTEN</h3>
+            <div class="card-footer">
+                <button class="btn-more">more</button>
+            </div> 
+        </div> 
+    </div>
+</section>
+
+
+{% endblock %}   
+      
