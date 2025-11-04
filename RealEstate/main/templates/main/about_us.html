@@ -1,0 +1,65 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+About Us
+{% endblock %}
+
+{% block content %}
+<section class="about_hero">
+    <h1>About Our Real Estate</h1>
+    <p>Building dreams, one home at a time.</p>
+</section>
+
+
+<section class="about">
+    <div class="text">
+        <h2>Who We Are</h2>
+        <p>We are a modern real estate company that focuses on innovation, transparency, and trust. Our goal is to connect people with their dream homes and investment opportunities across Saudi Arabia.</p>
+    </div>
+</section>
+
+
+<section class="why">
+    <h2>Why Choose Us</h2>
+    <div class="reasons">
+        <div class="reason">
+            <span class="material-icons">home</span>
+            <h3>Trusted Listings</h3>
+            <p>Every property we list is verified and approved for quality and accuracy.</p>
+        </div>
+        <div class="reason">
+            <span class="material-icons">handshake</span>
+            <h3>Professional Support</h3>
+            <p>Our experienced team is ready to assist you from the first call to closing day.</p>
+        </div>
+        <div class="reason">
+            <span class="material-icons">star</span>
+            <h3>High Standards</h3>
+            <p>We value design, comfort, and sustainability in every property we promote.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="members">
+        <div class="member">
+            <img src="{% static 'images/Sarah.PNG' %}" alt="Team member 1">
+            <h3>Sarah Al-Qahtani</h3>
+            <p>CEO & Founder</p>
+        </div>
+        <div class="member">
+            <img src="{% static 'images/Khalid.png' %}" alt="Team member 2">
+            <h3>Khalid Al-Salem</h3>
+            <p>Marketing Manager</p>
+        </div>
+        <div class="member">
+            <img src="{% static 'images/Sama.png' %}" alt="Team member 3">
+            <h3>Sama Al-Harbi</h3>
+            <p>Sales Director</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
