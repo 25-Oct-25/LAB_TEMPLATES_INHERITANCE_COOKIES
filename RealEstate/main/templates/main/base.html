@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    {% if dark_mode %}
+        <link rel="stylesheet" href="{% static 'css/dark-mode.css' %}" />
+    {% endif %}
+    <title>Real Estate - {% block title %}{% endblock %}</title>
+</head>
+
+<body class="{% if dark_mode %}dark-mode{% endif %}">
+
+    <div class="wrapper">
+
+        <nav class="nav-bar">
+            <h1>{% block header%}{% endblock %}</h1>
+            <div class="mid-nav">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'properties' %}">Properties</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+            <div class="right-nav">
+                <a href="#">
+                <div class="user">
+                    <span class="material-symbols-outlined">account_circle</span>
+                    <p>Sign Up</p>
+                </div>
+                </a>
+                <a href="{% url 'toggle_dark_mode' %}" class="dark-btn">
+                    <span class="material-symbols-outlined">
+                        {% if dark_mode %}light_mode{% else %}dark_mode{% endif %}
+                    </span>
+                </a>
+            </div>
+        </nav>
+
+        
+        {% block content %}{% endblock %}
+
+    </div>
+</body>
+</html>
