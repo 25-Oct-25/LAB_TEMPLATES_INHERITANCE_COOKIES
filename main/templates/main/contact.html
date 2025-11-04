@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}تواصل معنا{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop" alt="contact background">
+</section>
+
+<h2 class="section-title">CONTACT US</h2>
+
+<div class="contact-grid">
+  <div class="contact-info">
+    <p><span class="material-symbols-outlined">call</span> TELEPHONE:
+       <a href="tel:+9665726383764">+966 5726383764</a></p>
+    <p><span class="material-symbols-outlined">mail</span> EMAIL:
+       <a href="mailto:info@realestate.com">info@realestate.com</a></p>
+    <p><span class="material-symbols-outlined">location_on</span> ADDRESS:
+       ANAS BIN MALIK, RIYADH</p>
+  </div>
+
+  <div class="contact-map">
+    <iframe
+      src="https://www.google.com/maps?q=Riyadh&output=embed"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+{% endblock %}
