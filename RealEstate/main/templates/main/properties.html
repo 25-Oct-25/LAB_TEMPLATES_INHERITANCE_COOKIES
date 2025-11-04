@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Properties{% endblock %}
+{% block body_class %}properties-background{% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="properties-container"> 
+        <h2>Our Properties</h2>
+
+        <div class="properties-grid">
+            {% for property in properties %}
+                <div class="villa-card">
+                    <img src="/static/resources/{{ property.image }}" alt="{{ property.title }}">
+                    
+                    <div class="villa-card-content">
+                        <h4>{{ property.title }}</h4>
+                        <a href="#" class="more-btn">more</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}

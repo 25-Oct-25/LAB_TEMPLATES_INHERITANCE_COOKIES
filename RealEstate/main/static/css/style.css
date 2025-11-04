@@ -11,6 +11,7 @@
     box-sizing: border-box;
 }
 
+/* --- Superclass Styles --- */
 .navbar-header {
     position: relative;
     display: flex;
@@ -21,7 +22,7 @@
 
 }
 
-.navbar-header h1 {
+.navbar-header h1 a {
     font-family: phudu;
     font-size: 2.5rem;
     font-weight: 400;
@@ -32,7 +33,6 @@
 
 .container {
     display: flex;
-    flex-direction: row;
     background-color: white;
     border-radius: 4rem;
     padding: 1.5rem 6.5rem;
@@ -43,13 +43,14 @@
 
 }
 
-a {
+.navbar-header a {
+    font-family: phudu;
     text-decoration: none;
     color: black;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
 }
-a:hover {
+.navbar-header a:hover {
     color: rgb(177, 68, 68);
     transform: scale(1.08);
 }
@@ -77,14 +78,13 @@ a:hover {
     color: rgb(177, 68, 68);
     transform: scale(1.1);
 }
-
+/* --- Home Page Styles --- */
 main{
-   position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;       
     justify-content: space-between; 
     align-items: flex-start;  
-    background: transparent;
     padding: 2rem 1rem;
     min-height: 80vh;
     animation: fadeIn 1s ease-in-out;
@@ -93,7 +93,6 @@ main{
 
 main h1{
     display: flex;
-    flex-direction: row;
     font-family: phudu;
     font-size: 8rem;
     width: 60%;
@@ -105,7 +104,6 @@ main h1{
 
 main p{
     display: flex;
-    flex-direction: row;
     font-size: 1rem;
     width: 50%;
     position: relative;
@@ -125,49 +123,75 @@ main .main-container-link {
 
 }
 
-main .bottom-container a{
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-main .bottom-container a:hover {
-    color: rgb(177, 68, 68);
-    transform: scale(1.1);
-}
+
 
 main .bottom-container {
     display: flex;
-    flex-direction: row;
     position: relative;
     background-color: white;
     border-radius: 4rem;
     top:2.5rem;
-    padding: 2rem 9.5rem;
+    padding: 1.5rem 9.5rem;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
     flex-shrink: 0;
     align-self: center;
     z-index: 10;
     transition: transform 0.3s ease;
-
-    
 }
+main .filter{
+    display: flex;
+    flex-direction: column;
+    font-family: phudu;
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+main .bottom-container .filter:nth-child(1) {
+    color: #8BC34A; 
+}
+
+
+main .bottom-container .filter:nth-child(2) {
+    color: #FF9800; 
+}
+
+
+main .bottom-container .filter:nth-child(3) {
+    color: #9C27B0; 
+}
+
+
+main .bottom-container .filter:nth-child(4) {
+    color: #2196F3; /
+}
+
 main .bottom-container:hover{
     transform: scale(1.08);
 }
+main .bottom-container a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+main .bottom-container .filter:hover {
+    color: rgb(177, 68, 68);
+    transform: scale(1.1);
+}
+
 footer{
     z-index: 1;
     position: relative;
     text-align: center;
-    padding: 1.5rem ;
+    padding: 3rem ;
     background-color: #f1f1f1;
     color: #333333;
-    position: relative;
     bottom: 0;
     width: 100%;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .home-background {
@@ -187,12 +211,12 @@ html.dark main p {
     color: #eeeeee;
 }
 
-html.dark .navbar-header h1 {
+html.dark .navbar-header h1 a {
     color: #eeeeee;
 }
 
 html.dark .container {
-    background-color: #2D3748;
+    background-color: #242425;
 }
 
 html.dark .container a {
@@ -205,14 +229,14 @@ html.dark .preferences span {
 }
 
 html.dark main .bottom-container {
-    background-color: #2D3748;
+    background-color: #242425;
 }
 
 html.dark main .bottom-container a {
     color: #eeeeee;
 }
 
-html.dark a:hover,
+html.dark .navbar-header a:hover, html.dark .navbar-header h1 a:hover,
 html.dark main .bottom-container a:hover,
 html.dark .preferences span:hover {
     color: rgb(211, 101, 101);
@@ -240,5 +264,135 @@ html.light .preferences .light-mode-icon {
 
 html.dark .preferences .dark-mode-icon {
     background-color: rgb(97, 90, 90);
+    color: white;
+}
+/* --- Properties Page Styles --- */
+
+.properties-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    width: 100%;
+}
+
+.properties-container h2 {
+    font-family: phudu;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
     color: black;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2.5rem; 
+}
+
+.villa-card {
+    background-color: white;
+    border-radius: 1.5rem; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); 
+    overflow: hidden; 
+    transition: transform 0.3s ease;
+}
+
+.villa-card:hover {
+    transform: translateY(-5px); 
+}
+
+.villa-card img {
+    width: 100%; 
+    height: 250px;
+    object-fit: cover; 
+    display: block;
+}
+
+.villa-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.villa-card-content h4 {
+    font-family: phudu;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    width: 65%; 
+}
+
+.villa-card-content .more-btn {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.villa-card-content .more-btn:hover {
+    transform: scale(1.05);
+    background-color: #333;
+    color: white; 
+}
+
+
+html.dark .properties-background {
+    background-color: #1a202c;
+}
+html.dark .properties-container h2 {
+    color: #eeeeee;
+}
+html.dark .villa-card {
+    background-color: #2d3748;
+}
+html.dark .villa-card-content h4 {
+
+    color: #eeeeee;
+}
+/* --- Contact Page Styles --- */
+.contact-background {
+    background-image: url("/static/resources/email.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7rem ;
+    gap: 2rem;
+}
+.contact-card h2{
+    font-family: phudu;
+    font-weight: 500;
+    padding-bottom: 6rem;
+}
+.contact-card .left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1.5rem;
+}
+.left-col h3{
+    font-family: phudu;
+    font-weight: 600;
+}
+.contact-card .left-col h5{
+    font-family: phudu;
+    width: 44.2%;
+    font-weight: 400;
+}
+.contact-card .google-map-embed{
+    width: 44rem;
+    height: 24rem;
+    border: none;
+    border-radius: 2rem;
+    position:absolute;
+    top: 4rem;
+    right: 16rem;
+    left:30rem;
 }

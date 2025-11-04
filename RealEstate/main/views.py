@@ -28,3 +28,26 @@ def set_theme(request, mode_name):
     )
     
     return response
+
+
+def properties(request:HttpRequest) -> HttpResponse:
+    current_mode = request.COOKIES.get('mode','light')
+    properties = [
+        {"title" : "Villa Modern in Malqa", "image" : "villa1.jpg"},
+        {"title" : "Great home for you in Rimal", "image" : "villa2.jpg"},
+        {"title" : "Villa with 8 bedrooms in Swedey", "image" : "villa3.jpg"},
+        {"title" : "Amazing Villa in Hitten", "image" : "villa4.jpg"},
+    ]
+    context ={
+        'current_mode': current_mode,
+        'properties': properties,
+    }
+    return render(request, 'main/properties.html', context)
+
+def contact (request:HttpRequest) -> HttpResponse:
+    current_mode = request.COOKIES.get('mode','light')
+
+    context ={
+        'current_mode': current_mode
+    }
+    return render(request, 'main/contact.html',context)
