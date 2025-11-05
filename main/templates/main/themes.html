@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}كل العقارات{% endblock %}
+{% block content %}
+<h1 style="margin-bottom:12px">كل العقارات</h1>
+<div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));">
+  {% for p in properties %}
+    <article class="card">
+      <img src="{% static 'main/images/' %}{{ p.image }}" alt="{{ p.title }}"
+           style="width:100%;height:190px;object-fit:cover;border-radius:12px">
+      <h3 style="margin:8px 0 4px">{{ p.title }}</h3>
+      <div style="opacity:.8">{{ p.price }}</div>
+    </article>
+  {% endfor %}
+</div>
+{% endblock %}

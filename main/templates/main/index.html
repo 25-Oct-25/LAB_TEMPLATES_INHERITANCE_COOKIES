@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}الصفحة الرئيسية{% endblock %}
+{% block body_class %} home{% endblock %}
+
+{% block content %}
+<section class="hero hero--full">
+    <div class="dock" role="navigation" aria-label="Categories">
+  <a class="dock-item all"   href="#"><span class="material-symbols-outlined">home</span><b>ALL</b></a>
+  <a class="dock-item props" href="/properties/"><span class="material-symbols-outlined">apartment</span><b>PROPERTIES</b></a>
+  <a class="dock-item hotel" href="#"><span class="material-symbols-outlined">hotel</span><b>HOTEL</b></a>
+  <a class="dock-item villa" href="#"><span class="material-symbols-outlined">villa</span><b>VILLA</b></a>
+</div>
+
+  {% if theme == 'dark' %}
+    <img class="hero-img" src="{% static 'main/images/skyscraper-dark.jpg' %}" alt="City night">
+  {% else %}
+    <img class="hero-img" src="{% static 'main/images/skyscraper.jpeg' %}" alt="City day">
+  {% endif %}
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title"><span>FIND YOUR</span><br><span>DREAMS</span></h1>
+    <p class="hero-sub">
+      Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+    </p>
+    <a class="btn" href="/properties/">Explore Properties</a>
+  </div>
+
+  <div class="dock">
+    <a class="dock-item"><span class="material-symbols-outlined">home</span><b>ALL</b></a>
+    <a class="dock-item"><span class="material-symbols-outlined">apartment</span><b>PROPERTIES</b></a>
+    <a class="dock-item"><span class="material-symbols-outlined">hotel</span><b>HOTEL</b></a>
+    <a class="dock-item"><span class="material-symbols-outlined">villa</span><b>VILLA</b></a>
+  </div>
+</section>
+{% endblock %}

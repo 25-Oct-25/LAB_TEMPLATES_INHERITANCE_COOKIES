@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <title>{% block title %}منصة العقارات{% endblock %}</title>
+
+  <!-- تحسين تحميل الخطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400" rel="stylesheet">
+
+  <!-- CSS (مع كسر كاش) -->
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}?v=5">
+
+  <!-- فافيكون (اختياري) -->
+  <link rel="icon" href="{% static 'main/images/email.jpg' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+
+<body class="{% if theme == 'dark' %}dark{% endif %}{% block body_class %}{% endblock %}">
+  <!-- رابط تخطي للمحتوى لتحسين الوصول -->
+  <a href="#main-content" class="sr-only">تخطي إلى المحتوى</a>
+
+  <!-- الهيدر: عائم فوق الهيرو في صفحة الهوم عبر CSS أو محدد :has() -->
+  <!-- نجعل اتجاه الهيدر LTR ليكون HOME يسار، القائمة وسط، والأيقونات يمين حتى مع صفحة RTL -->
+  <header class="site-header container" dir="ltr" aria-label="الرأس">
+    <a href="/" class="brand">HOME</a>
+
+    <nav class="pill-nav" aria-label="التنقل الرئيسي">
+      <a href="/">Home</a>
+      <a href="/properties/">Properties</a>
+      <a href="#" aria-disabled="true">Services</a>
+      <a href="#" aria-disabled="true">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a href="#" class="link" aria-disabled="true">Sign up</a>
+      <!-- تبديل الثيم عبر الكوكيز (بدون JS) -->
+      <a class="icon sun" href="/toggle-theme/" title="Light">
+        <span class="material-symbols-outlined" aria-hidden="true">brightness_5</span>
+      </a>
+      <a class="icon moon" href="/toggle-theme/" title="Dark">
+        <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer container" aria-label="تذييل">
+    <p>&copy; All rights reserved for realestate company -- Osama Adel</p>
+  </footer>
+</body>
+</html>
