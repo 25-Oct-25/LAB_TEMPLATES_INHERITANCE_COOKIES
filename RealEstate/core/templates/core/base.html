@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title|default:"Real Estate" }}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body class="light-mode">
+  <header class="navbar">
+    <div class="logo">HOME</div>
+
+    <nav class="main-nav">
+      <a href="{% url 'home' %}" class="nav-link">Home</a>
+      <a href="{% url 'properties' %}" class="nav-link">Properties</a>
+      <a href="#" class="nav-link">Services</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="user-controls">
+      <a href="#" class="sign-up-btn">
+        <span class="material-symbols-outlined">person</span> Sign up
+      </a>
+
+      <div class="theme-switch">
+        <button class="theme-btn" data-theme="light" aria-label="Light mode">
+          <span class="material-symbols-outlined">light_mode</span>
+        </button>
+        <button class="theme-btn" data-theme="dark" aria-label="Dark mode">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{% static 'js/script.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>
