@@ -1,0 +1,42 @@
+{%extends 'main/base.html'%}
+{%load static%}
+
+{%block title%}Home Page{%endblock%}
+
+
+{%block content%}
+<main class="home-page-main">
+
+        <section class="home-content">
+            <div class="home-text-container">
+                <h1>FIND YOUR DREAMS</h1>
+                    <p>our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. our catalog will surprise you.  Rather, discover an unprecendented offers of luxury properties.</p>
+                    <a href="{%url 'main:properties_view'%}" class="explore-btn">Expolore Properties</a>
+            </div>
+        </section>
+
+        <section class="filter-bar-wrapper">
+            <div class="filter-bar">
+                <a href="" class="filter-item active">
+                    <span class="material-symbols-outlined" style="background-color: #4caf4fae;">house</span>
+                    <span style="color: #4CAF50;">All</span>
+                </a>
+                <a href="" class="filter-item">
+                    <span class="material-symbols-outlined" style="background-color: #ff9900b7;">factory</span>
+                    <span style="color: #FF9800;">Properties</span>
+                </a>
+                <a href="" class="filter-item">
+                    <span class="material-symbols-outlined" style="background-color: #e91e62bb;">hotel</span>
+                    <span style="color: #E91E63;">hotel</span>
+                </a>
+                <a href="" class="filter-item">
+                    <span class="material-symbols-outlined" style="background-color: #2195f3d4;">villa</span>
+                    <span style="color: #2196F3;">villa</span>
+                </a>
+            </div>
+        </section>
+
+        <footer class="bottom-grey-area"></footer>
+            
+    </main>
+{%endblock%}

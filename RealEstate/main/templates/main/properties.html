@@ -1,0 +1,65 @@
+{%extends 'main/base.html'%}
+
+{%block title%}Properties{%endblock%}
+
+{%block style%}
+<style>
+    body {
+        background-color: rgb(222, 222, 222);
+    }
+    html.dark-mode body{
+        background-color: gray;
+    }
+</style>
+{%endblock%}
+
+
+{%block content%}
+
+
+
+<section class="properties-content">
+    <h2>our properties</h2>
+
+    <div class="properties-list">
+
+        <div class="villa">
+                <img src="/static/images/villa1.jpg" alt="malqa villa">
+                <div class="villa-details">
+                    <h3>villa modern in malqa</h3>
+                    <a href="" class="more-btn">more</a>
+                </div>
+
+        </div>
+        <div class="villa">
+            <img src="/static/images/villa2.jpg" alt="rimal home">
+                <div class="villa-details">
+                    <h3>greate home for you in rimal</h3>
+                    <a href="" class="more-btn">more</a>
+                </div>
+
+        </div>
+        <div class="villa">
+            <img src="/static/images/villa3.jpg" alt="swedey villa">
+                <div class="villa-details">
+                    <h3>villa with 8 bedrooms in swedey</h3>
+                    <a href="" class="more-btn">more</a>
+                </div>
+
+        </div>
+        <div class="villa">
+            <img src="/static/images/villa4.jpg" alt="hitten vila">
+                <div class="villa-details">
+                    <h3>amazing villa in hitten</h3>
+                    <a href="" class="more-btn">more</a>
+                </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+{%endblock%}
