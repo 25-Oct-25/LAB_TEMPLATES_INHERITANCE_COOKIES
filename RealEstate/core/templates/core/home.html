@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>FIND YOUR<br>DREAMS</h1>
+    <p>
+      Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+      Our catalog will surprise you.
+    </p>
+    <a href="{% url 'properties' %}" class="btn-explore">Explore Properties</a>
+  </div>
+
+  <div class="category-bar">
+    <div class="category-item">
+      <span class="material-symbols-outlined">home</span>
+      <span class="label">ALL</span>
+    </div>
+    <div class="category-item">
+      <span class="material-symbols-outlined">apartment</span>
+      <span class="label">PROPERTIES</span>
+    </div>
+    <div class="category-item">
+      <span class="material-symbols-outlined">hotel</span>
+      <span class="label">HOTEL</span>
+    </div>
+    <div class="category-item">
+      <span class="material-symbols-outlined">villa</span>
+      <span class="label">VILLA</span>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero-section');
+    const lightImage = "{% static 'images/skyscraper.jpeg' %}";
+    const darkImage  = "{% static 'images/skyscraper-dark.jpg' %}";
+
+    function applyHero() {
+      const isDark = document.body.classList.contains('dark-mode');
+      hero.style.backgroundImage = `url(${isDark ? darkImage : lightImage})`;
+    }
+
+    applyHero();
+    document.addEventListener('themechange', applyHero);
+  });
+</script>
+{% endblock %}
