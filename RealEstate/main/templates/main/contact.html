@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}CONTACT - Find Your Dreams{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+<div class="contact-page" style="background-image: url('/static/images/email.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    
+    <div class="contact-overlay"></div>
+    
+    <div class="contact-main">
+        
+        <!-- Left Side -->
+        <div class="left-side">
+            <h1 class="main-title">CONTACT US</h1>
+            
+            <div class="info-section">
+                <div class="info-block">
+                    <p class="info-label">TELEPHONE:</p>
+                    <a href="tel:+966572638764" class="info-value blue-link">+966 57263883764</a>
+                </div>
+                
+                <div class="info-block">
+                    <p class="info-label">EMAIL:</p>
+                    <a href="mailto:info@realestate.com" class="info-value blue-link">info@realestate.com</a>
+                </div>
+                
+                <div class="info-block">
+                    <p class="info-label">ADDRESS:</p>
+                    <p class="info-value white-text">
+                        ANAS BIN MALIK, RIYADH<br>
+                        BUILDING W-112<br>
+                        SAUDI ARABIA
+                    </p>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <!-- Right Side -->
+        <div class="right-side">
+            <div class="map-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.123456789!2d46.7388!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ5LjAiTiA0NsKwNDQnMTkuNyJF!5e0!3m2!1sen!2ssa!4v1234567890" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+{% endblock %}

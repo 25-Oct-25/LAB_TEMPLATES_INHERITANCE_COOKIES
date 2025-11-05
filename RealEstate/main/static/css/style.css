@@ -1,0 +1,363 @@
+/* إعداد عام */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Phudu", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* رأس الصفحة */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 50px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999; 
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* روابط التنقل */
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff7eb3;
+}
+
+/* زر التسجيل */
+.btn-signup {
+  background: #ff7eb3;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-signup:hover {
+  background: #ff4b8b;
+}
+
+/* زر الوضع الليلي */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #f4f4f4;
+}
+
+body.dark-mode .header {
+  background: #2c2c2c;
+}
+
+body.dark-mode a {
+  color: #f4f4f4;
+}
+
+body.dark-mode .btn-signup {
+  background: #ff4b8b;
+}
+
+/* قسم البطل */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 70px;
+}
+
+.hero h1 {
+  font-size: 70px;
+}
+
+.hero p {
+  margin: 20px 0;
+}
+
+.hero .btn {
+  background: #000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 1.3s;
+}
+
+.hero .btn:hover {
+  background: #3e1e2b;
+}
+
+/* أزرار الأقسام */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: #fff;
+  padding: 30px 60px;
+  border-radius: 100px;
+  width: fit-content;
+  margin: -80px auto 60px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.category-card {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.category-name {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+.category-card:hover .category-name {
+  color: #ff7eb3;
+}
+
+/* زر الاستكشاف */
+.btn-explore {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  transition: 0.3s;
+}
+
+.btn-explore:hover {
+  background: #ff7eb3;
+  border-color: #ff7eb3;
+  box-shadow: 0 5px 15px rgba(255,126,179,0.4);
+}
+
+/* الوضع الليلي للأقسام */
+body.dark-mode .categories {
+  background: #2d3748;
+}
+
+body.dark-mode .category-name {
+  color:#e2e8f0;
+}
+
+  
+/* Contact Page */
+/* === CONTACT PAGE === */
+ 
+.contact-page {
+    min-height: 100vh;
+    position: relative;
+    padding-top: 70px;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(70, 70, 70, 0.8);
+    z-index: 1;
+}
+
+.contact-main {
+    position: relative;
+    z-index: 2;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 60px 100px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+/* === LEFT SIDE === */
+
+.left-side {
+    padding-top: 30px;
+}
+
+.main-title {
+    font-size: 56px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 90px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    margin-bottom: 70px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #d5d5d5;
+    text-transform: uppercase;
+}
+
+.info-value {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.blue-link {
+    color: #5ba3ff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.blue-link:hover {
+    color: #ff7eb3;
+    text-decoration: underline;
+}
+
+.white-text {
+    color: #fff;
+}
+
+/* === RIGHT SIDE === */
+
+.right-side {
+    padding-top: 140px;
+}
+
+.map-box {
+    width: 100%;
+    height: 480px;
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* === DARK MODE === */
+
+body.dark-mode .contact-overlay {
+    background: rgba(15, 15, 15, 0.88);
+}
+
+body.dark-mode .info-label {
+    color: #a8a8a8;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 1400px) {
+    .contact-main {
+        grid-template-columns: 450px 1fr;
+        gap: 80px;
+        padding: 60px 70px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact-main {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 50px 60px;
+    }
+    
+    .right-side {
+        padding-top: 0;
+    }
+    
+    .main-title {
+        font-size: 48px;
+        margin-bottom: 70px;
+    }
+    
+    .map-box {
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-main {
+        padding: 40px 30px;
+    }
+    
+    .main-title {
+        font-size: 38px;
+        margin-bottom: 50px;
+    }
+    
+    .info-section {
+        gap: 40px;
+    }
+    
+    .info-value {
+        font-size: 22px;
+    }
+    
+    .map-box {
+        height: 350px;
+    }
+    
+    .euro-card {
+        width: 190px;
+        height: 120px;
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,70 @@
+
+{% extends 'main/base.html' %}
+
+{% block title %}HOME - Find Your Dreams{% endblock %}
+
+{% block content %}
+<div class="container" style="background-image: url('/static/images/skyscraper.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">FIND YOUR<br>DREAMS</h1>
+            <p class="hero-description">
+                Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.
+                Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.
+            </p>
+
+            <a href="{% url 'main:properties_view' %}" class="btn-explore">Explore Properties</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+
+        <div class="category-card">
+            <div class="category-icon" style="background-color: rgba(134, 239, 172, 0.3);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 22V12H15V22" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <p class="category-name">ALL</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon" style="background-color: rgba(252, 211, 77, 0.3);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="7" height="7" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="14" y="3" width="7" height="7" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="14" y="14" width="7" height="7" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="3" y="14" width="7" height="7" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <p class="category-name">PROPERTIES</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon" style="background-color: rgba(251, 207, 232, 0.5);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#EC4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="9" y="12" width="6" height="10" stroke="#EC4899" stroke-width="2"/>
+                </svg>
+            </div>
+            <p class="category-name">HOTEL</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon" style="background-color: rgba(191, 219, 254, 0.5);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 22V12H15V22M3 9H21M7 6V2" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <p class="category-name">VILLA</p>
+        </div>
+
+    </section>
+
+</div>
+{% endblock %}
