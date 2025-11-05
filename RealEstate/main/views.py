@@ -22,7 +22,8 @@ def contact_view(request : HttpRequest):
     theme = request.COOKIES.get('theme', 'light')
     return render(request, 'main/contact.html', {"theme": theme})
 def about(request):
-    return render(request, 'main/about.html')
+    theme = request.COOKIES.get('theme', 'light')
+    return render(request, 'main/about.html', {"theme": theme})
 
 def toggle_theme(request):
     current_theme = request.COOKIES.get('theme', 'light')
@@ -30,5 +31,4 @@ def toggle_theme(request):
     
     response = redirect(request.META.get('HTTP_REFERER', '/'))
     response.set_cookie('theme', new_theme, max_age=60*60*24*30)
-    
     return response
