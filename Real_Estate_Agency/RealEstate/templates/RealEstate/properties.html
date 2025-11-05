@@ -1,0 +1,46 @@
+{% extends 'RealEstate/base.html' %}
+{% load static %}
+
+{% block title %}
+properties
+{% endblock %}
+
+{% block cover %} 
+<div id="cover_properties"></div>
+{% endblock %}
+
+{% block content %}
+<div id="main_section_properties">
+    <h1>OUR PROPERTIES</h1>
+    <div id="container_card">
+        <div class="card">
+            <img src="{% static '/image/villa1.jpg' %}" alt="{{p.title}}">
+            <div class="card-content">
+                <h3>""</h3>
+                <a href="#" class="button">PHOTO</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static '/image/villa2.jpg' %}" alt="{{p.title}}">
+            <div class="card-content">
+                <h3>VILLA MODERN IN MALQA</h3>
+                <a href="#" class="button">PHOTO</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static '/image/villa3.jpg' %}" alt="{{p.title}}">
+            <div class="card-content">
+                <h3>VILLA MODERN IN MALQA</h3>
+                <a href="#" class="button">PHOTO</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static '/image/villa4.jpg' %}" alt="{{p.title}}">
+            <div class="card-content">
+                <h3>VILLA MODERN IN MALQA</h3>
+                <a href="#" class="button">PHOTO</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

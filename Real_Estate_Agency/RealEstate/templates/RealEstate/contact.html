@@ -1,0 +1,32 @@
+{% extends 'RealEstate/base.html' %}
+{% load static %}
+
+{% block title %}
+contact
+{% endblock %}
+
+{% block cover %} 
+<div id="cover_contact"></div>
+{% endblock %}
+
+{% block content %}
+<div id="main_section_contact">
+    <div id="left_div">
+        <h1>contact us</h1>
+        <h3>telephone:<a href="#">05666666</a></h3>
+        <h3>email: <a href="#">test@hotmail.com</a></h3>
+        
+        
+    </div>
+    <div id="right_div">
+        <iframe
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            width="300"
+            height="200"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+        </iframe>
+    </div>
+    
+</div>
+{% endblock %}
