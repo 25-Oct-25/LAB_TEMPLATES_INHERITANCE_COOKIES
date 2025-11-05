@@ -1,0 +1,44 @@
+{% extends 'realEstate_web/base.html' %}
+
+{% block title %}HomePage{% endblock %}
+
+{% block content %}
+
+<section class="hero-image">
+    <div class="hero-content">
+        <h1>FIND YOUR<br>DREAMS</h1>
+        <br>
+        <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. Our<br>
+            catalog
+            will surprise you. Rather, discover an unprecendented offers of luxury properties. </p>
+        <br>
+        <button href="{% url 'main:properties' %}" class="button">Explore Properties</button>
+
+        <br>
+
+        <nav class="bottom-nav">
+            <div class="nav-link">
+                <span class="material-symbols-outlined icon">home</span>
+                <a href="#">ALL</a>
+            </div>
+
+            <div class="nav-link">
+                <span class="material-symbols-outlined icon">factory</span>
+                <a href="#">PROPERTIES</a>
+            </div>
+
+            <div class="nav-link">
+                <span class="material-symbols-outlined icon">hotel</span>
+                <a href="#">HOTEL</a>
+            </div>
+
+            <div class="nav-link">
+                <span class="material-symbols-outlined icon">villa</span>
+                <a href="#">VILLA</a>
+            </div>
+        </nav>
+
+    </div>
+</section>
+
+{% endblock %}
