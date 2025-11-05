@@ -167,18 +167,23 @@ section
 }
 
 @keyframes text-fade {
-  0% { opacity: 1; } /* Start fully visible */
-  50% { opacity: 0.2; } /* Fade to nearly transparent */
-  100% { opacity: 1; } /* End fully visible (to loop seamlessly) */
+  0% {  font-size: 0cm; text-align: right;} /* Start fully visible */
+  /*50% {  font-size: 2cm; } /* Fade to nearly transparent */ 
+  100% {  font-size: 3cm;} /* End fully visible (to loop seamlessly) */
 }
 
-section h1
+section .dream
+{
+    width: fit-content;
+}
+
+section .dream h1
 {
     font-size: 3cm;
     text-align: left;
     font-weight: 500;
     padding-bottom: 30px;
-    animation: text-fade 2s ease-in-out infinite alternate;
+    animation: text-fade 2s ease-in-out ;
 }
 
 
