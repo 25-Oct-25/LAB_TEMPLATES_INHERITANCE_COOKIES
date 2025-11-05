@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+  <div class="contact-info">
+    <h1>CONTACT US</h1>
+    <p><strong>TELEPHONE:</strong> <a href="tel:+96657263883764">+966 57263883764</a></p>
+    <p><strong>EMAIL:</strong> <a href="mailto:info@realestate.com">info@realestate.com</a></p>
+    <p><strong>ADDRESS:</strong><br>
+        ROSHN Project, King Khalid Road<br>
+        Riyadh, Saudi Arabia
+    </p>
+
+  </div>
+
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28962.18845241114!2d46.780589825683606!3d24.85450490000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efb0bdb5d2f85%3A0xa650ba1e02048e0!2z2YXYtNix2YjYuSDYsdmI2LTZhg!5e0!3m2!1sar!2ssa!4v1762242956790!5m2!1sar!2ssa" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% block title %}Home{%endblock%}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h2 class="hero-title animate">FIND YOUR <br> DREAMS</h2>
+        <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+        <a href="{% url 'main:properties' %}" class="explore_btn">
+          Explore Properties
+        </a>
+
+
+    </div>
+</section>
+<div class="bottom-nav">
+  <div class="bottom-item">
+    <span class="material-icons">home</span>
+    ALL
+  </div>
+  <a href="{% url 'main:properties' %}" class="bottom-item">
+    <span class="material-icons">business</span>
+    PROPERTIES
+  </a>
+
+  <div class="bottom-item">
+    <span class="material-icons">hotel</span>
+    HOTEL
+  </div>
+  <div class="bottom-item">
+    <span class="material-icons">holiday_village</span>
+    VILLA
+  </div>
+</div>
+
+
+{%endblock%}

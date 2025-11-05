@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Real Estate{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{% static 'js/theme.js' %}" defer></script>
+
+</head>
+
+<body class="{% if request.COOKIES.theme == 'dark' %}dark-mode{% endif %}">
+
+    <header class="navbar">
+        <a href="/" class="logo">HOME</a>
+
+
+        <nav class="nav-menu">
+            <a href="{% url 'main:home' %}">Home</a>
+            <a href="{% url 'main:properties' %}">Properties</a>
+            <a href="#">Services</a>
+            <a href="{% url 'main:about' %}">About</a>
+            <a href="{% url 'main:contact' %}">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <span class="material-icons">person</span>
+            <span class="signup-text">Sign up</span>
+
+            <a href="{% url 'main:toggle_theme' %}" class="theme-toggle">
+                <span class="material-icons sun-icon {% if request.COOKIES.theme != 'dark' %}active{% endif %}">light_mode</span>
+                <span class="material-icons moon-icon {% if request.COOKIES.theme == 'dark' %}active{% endif %}">dark_mode</span>
+            </a>
+
+        </div>
+
+
+    </header>
+
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+<footer class="footer">
+  <p>Real Estate International. All Rights Reserved © 2025</p>
+</footer>
+
+</body>
+</html>
